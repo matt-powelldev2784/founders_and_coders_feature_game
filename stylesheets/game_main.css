@@ -1,23 +1,40 @@
 .main__game_container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   min-height: 500px;
+}
+
+.bg_container {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
   border: 3px solid green;
 }
 
-.main__tree_bg {
+.main__tree_bg1 {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0px;
+  transform: translateY(-50%);
   height: 100%;
-  width: auto;
+}
+
+.main__tree_bg2 {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  height: 100%;
 }
 
 .main__char {
   position: absolute;
   bottom: 23.5%;
+  left: 20%;
   height: 15%;
   width: auto;
 }
