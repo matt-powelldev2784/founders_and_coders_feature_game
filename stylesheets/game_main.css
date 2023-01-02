@@ -1,0 +1,23 @@
+.main__game_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  border: 3px solid green;
+}
+
+.main__tree_bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+}
+
+.main__char {
+  position: absolute;
+  bottom: 23.5%;
+  height: 15%;
+  width: auto;
+}
