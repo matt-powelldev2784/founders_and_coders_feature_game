@@ -1,6 +1,6 @@
-import { incrementProperty } from './helpers/updateStyles.js'
-import { setPropertyValue } from './helpers/updateStyles.js'
-import { getPropertyValue } from './helpers/updateStyles.js'
+import { incrementProperty } from '../helpers/updateStyles.js'
+import { setPropertyValue } from '../helpers/updateStyles.js'
+import { getPropertyValue } from '../helpers/updateStyles.js'
 
 const SPEED = 1.5
 const groundImage1 = document.getElementsByClassName('main__tree_bg1')[0]
@@ -9,7 +9,7 @@ const groundImage2 = document.getElementsByClassName('main__tree_bg2')[0]
 export const setSecondGroundImagePosition = () => {
   const groundImageWidth = getGroundConatinerWidth()
   const firstGroundImagePosition = getPropertyValue(groundImage1, 'left')
-  const newImagePosition = groundImageWidth - (firstGroundImagePosition - firstGroundImagePosition * 2) - 1
+  const newImagePosition = groundImageWidth - (firstGroundImagePosition - firstGroundImagePosition * 2) - 2
   setPropertyValue(groundImage2, 'left', `${newImagePosition}px`)
 }
 

@@ -1,5 +1,5 @@
-import { updateGround } from './ground.js'
-import { setSecondGroundImagePosition } from './ground.js'
+import { updateGround } from './ground/ground.js'
+import { setSecondGroundImagePosition } from './ground/ground.js'
 
 let lastTime
 
