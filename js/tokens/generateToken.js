@@ -12,7 +12,6 @@ export const tokens = []
 export const generateTokens = () => {
   setInterval(() => {
     if (pauseGame === false) {
-      console.log('Math.random() * SPEED', Math.random() * SPEED + 5000)
       generateToken('./img/logos/youtube_logo.svg', currentTokenNumber)
     }
   }, Math.random() * SPEED + 5000)
