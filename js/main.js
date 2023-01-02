@@ -1,11 +1,13 @@
-import { updateGround } from './ground/ground.js'
-import { setSecondGroundImagePosition } from './ground/ground.js'
-
-let lastTime
+import { updateGround } from './ground/uppdateGround.js'
+import { setSecondGroundImagePosition } from './ground/setSecondGroundImagePosition.js'
+import { animateCharacterAtInveral } from './character/animateCharacter.js'
 
 setSecondGroundImagePosition()
 document.addEventListener('resize', setSecondGroundImagePosition)
 
+animateCharacterAtInveral()
+
+let lastTime
 const updateGameFrame = (time) => {
   if (lastTime == null) {
     lastTime = time
@@ -17,11 +19,6 @@ const updateGameFrame = (time) => {
   updateGround(delta)
 
   lastTime = time
-
-  // setTimeout(() => {
-  //   window.requestAnimationFrame(updateGameFrame)
-  // }, 0.0000000000000000001)
-
   window.requestAnimationFrame(updateGameFrame)
 }
 window.requestAnimationFrame(updateGameFrame)
