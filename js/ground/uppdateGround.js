@@ -1,6 +1,6 @@
 import { setPropertyValue } from '../helpers/updateProperties.js'
 import { getPropertyValue } from '../helpers/updateProperties.js'
-import { groundImage1, groundImage2, SPEED } from './globalVariables.js'
+import { groundImage1, SPEED } from './globalVariables.js'
 import { setSecondGroundImagePosition } from './setSecondGroundImagePosition.js'
 import { getGroundConatinerWidth } from './getGroundContainerWidth.js'
 
@@ -13,7 +13,6 @@ export const updateGround = (delta) => {
   const groundHasLeftScreen = getGroundConatinerWidth() - getGroundConatinerWidth() * 2
   const firstGroundElementNewValue = getPropertyValue(groundImage1, 'left')
   if (firstGroundElementNewValue < groundHasLeftScreen) {
-    console.log('groundHasLeftScreen!')
     setPropertyValue(groundImage1, 'left', '0px')
     setSecondGroundImagePosition()
   }

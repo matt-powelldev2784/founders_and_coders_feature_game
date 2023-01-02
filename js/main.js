@@ -1,24 +1,33 @@
 import { updateGround } from './ground/uppdateGround.js'
+import { addPauseGameEventListeners, pauseGame, addStartGameEventListener } from './helpers/pauseGame.js'
 import { setSecondGroundImagePosition } from './ground/setSecondGroundImagePosition.js'
-import { animateCharacterAtInveral } from './character/animateCharacter.js'
+import { animateCharacterAtInterval } from './character/animateCharacter.js'
+import { SPEED } from './ground/globalVariables.js'
+import { updateTokens } from './tokens/updateTokens.js'
+import { generateTokens } from './tokens/generateToken.js'
 
 setSecondGroundImagePosition()
 document.addEventListener('resize', setSecondGroundImagePosition)
-
-animateCharacterAtInveral()
+addPauseGameEventListeners()
+addStartGameEventListener()
+animateCharacterAtInterval()
 
 let lastTime
-const updateGameFrame = (time) => {
+export const updateGameFrame = (time) => {
   if (lastTime == null) {
     lastTime = time
     window.requestAnimationFrame(updateGameFrame)
     return
   }
-  const delta = time - lastTime
 
-  updateGround(delta)
-
-  lastTime = time
-  window.requestAnimationFrame(updateGameFrame)
+  if (pauseGame === false) {
+    const delta = time - lastTime
+    updateGround(delta)
+    updateTokens(delta)
+    lastTime = time
+    window.requestAnimationFrame(updateGameFrame)
+  }
 }
 window.requestAnimationFrame(updateGameFrame)
+
+generateTokens()

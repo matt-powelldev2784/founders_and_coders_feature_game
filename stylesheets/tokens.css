@@ -1,0 +1,8 @@
+.token {
+  position: absolute;
+  bottom: 45%;
+  right: -200px;
+  width: 10%;
+  height: 10%;
+  z-index: 1;
+}

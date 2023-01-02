@@ -9,7 +9,7 @@ const animateCharacter = () => {
   }
 }
 
-export const animateCharacterAtInveral = () => {
+export const animateCharacterAtInterval = () => {
   setInterval(() => {
     animateCharacter()
   }, 300)
