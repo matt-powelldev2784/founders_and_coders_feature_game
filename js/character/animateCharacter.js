@@ -1,5 +1,3 @@
-import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js'
-
 const animateCharacter = () => {
   const character = document.getElementById('main__char')
   const currentCharacter = character.getAttribute('src').slice(6, -4)
