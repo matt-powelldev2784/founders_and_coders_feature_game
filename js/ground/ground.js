@@ -2,7 +2,7 @@ import { incrementProperty } from '../helpers/updateStyles.js'
 import { setPropertyValue } from '../helpers/updateStyles.js'
 import { getPropertyValue } from '../helpers/updateStyles.js'
 
-const SPEED = 1.5
+const SPEED = 0.05
 const groundImage1 = document.getElementsByClassName('main__tree_bg1')[0]
 const groundImage2 = document.getElementsByClassName('main__tree_bg2')[0]
 
@@ -20,7 +20,7 @@ export const getGroundConatinerWidth = () => {
 
 export const updateGround = (delta) => {
   const firstGroundElementCurrentValue = getPropertyValue(groundImage1, 'left')
-  const groundElementNewValue = `${firstGroundElementCurrentValue - 1 * SPEED}px`
+  const groundElementNewValue = `${firstGroundElementCurrentValue - delta * SPEED - 1}px`
   setPropertyValue(groundImage1, 'left', groundElementNewValue)
   setSecondGroundImagePosition()
 
@@ -32,21 +32,3 @@ export const updateGround = (delta) => {
     setSecondGroundImagePosition()
   }
 }
-
-// export const updateGround = (delta) => {
-//   groundElements.forEach((ground) => {
-//     const currentPosition = getComputedStyle(ground).getPropertyValue('--left')
-//     console.log('currentPosition', currentPosition)
-
-//     const currentGroundWidth = getComputedStyle(ground).getPropertyValue('width').slice(0, -2)
-//     const backgroundOffScreen = currentGroundWidth - currentGroundWidth * 2
-//     console.log('backgroundOffScreen', backgroundOffScreen)
-
-//     // if (currentPosition > backgroundOffScreen) {
-//     //   setPropertyValue(ground, '--left', '0')
-//     //   return
-//     // }
-
-//     //incrementProperty(ground, '--left', delta * SPEED - 1)
-//   })
-// }
