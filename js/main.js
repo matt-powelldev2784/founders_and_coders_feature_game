@@ -1,13 +1,13 @@
-import { updateGround } from './ground/uppdateGround.js'
+import { updateGroundPosition } from './ground/updateGroundPosition.js'
+import { setSecondGroundImageLeftValue } from './ground/setSecondGroundImageLeftValue.js'
+import { generateTokens } from './tokens/generateToken.js'
+import { updateTokensPosition } from './tokens/updateTokensPosition.js'
 import { addPauseGameEventListeners, pauseGame, addStartGameEventListener } from './helpers/pauseGame.js'
-import { setSecondGroundImagePosition } from './ground/setSecondGroundImagePosition.js'
 import { animateCharacterAtInterval } from './character/animateCharacter.js'
 import { SPEED } from './ground/globalVariables.js'
-import { updateTokensPosition } from './tokens/updateTokensPosition.js'
-import { generateTokens } from './tokens/generateToken.js'
 import { loadEventListeners } from './eventListeners/eventListeners.js'
 
-setSecondGroundImagePosition()
+setSecondGroundImageLeftValue()
 loadEventListeners()
 addPauseGameEventListeners()
 addStartGameEventListener()
@@ -23,7 +23,7 @@ export const updateGameFrame = (time) => {
 
   if (pauseGame === false) {
     const delta = time - lastTime
-    updateGround(delta)
+    updateGroundPosition(delta)
     updateTokensPosition(delta)
     lastTime = time
     window.requestAnimationFrame(updateGameFrame)

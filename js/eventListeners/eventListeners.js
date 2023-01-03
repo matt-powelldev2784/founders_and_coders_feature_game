@@ -1,7 +1,6 @@
 import { setGameToPause } from '../helpers/pauseGame.js'
-import { setSecondGroundImagePosition } from '../ground/setSecondGroundImagePosition.js'
+import { setSecondGroundImageLeftValue } from '../ground/setSecondGroundImageLeftValue.js'
 
 export const loadEventListeners = () => {
-  document.addEventListener('resize', setSecondGroundImagePosition)
-  document.addEventListener('resize', setGameToPause)
+  document.addEventListener('resize', setSecondGroundImageLeftValue)
 }
