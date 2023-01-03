@@ -17,11 +17,11 @@ export const generateTokens = () => {
   }, Math.random() * SPEED + 5000)
 }
 
-const generateToken = (img, tokenNumber) => {
+const generateToken = (img, uniqueKey) => {
   currentTokenNumber++
-  tokens[tokenNumber] = {}
-  tokens[tokenNumber].image = img
-  tokens[tokenNumber].tokenNumber = tokenNumber
-  createTokenElement(img, tokenNumber)
-  addCssRuleForToken(tokens[tokenNumber].cssString)
+  tokens[uniqueKey] = {}
+  tokens[uniqueKey].image = img
+  tokens[uniqueKey].uniqueKey = uniqueKey
+  createTokenElement(img, uniqueKey)
+  addCssRuleForToken(tokens[uniqueKey].cssString)
 }

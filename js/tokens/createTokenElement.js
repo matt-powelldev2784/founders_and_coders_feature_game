@@ -1,10 +1,10 @@
 import { createElement } from './createElement.js'
 import { tokens } from './generateToken.js'
 
-export const createTokenElement = (img, tokenNumber) => {
+export const createTokenElement = (img, uniqueKey) => {
   const bg_container = document.getElementById('bg_container')
-  const tokenNumberString = `token${tokenNumber}`
-  const tokenStringforCSS = `.token${tokenNumber}`
+  const tokenNumberString = `token${uniqueKey}`
+  const tokenStringforCSSClass = `.token${uniqueKey}`
   const token = createElement('img', {
     class: tokenNumberString,
     id: tokenNumberString,
@@ -12,6 +12,6 @@ export const createTokenElement = (img, tokenNumber) => {
   })
   bg_container.append(token)
 
-  tokens[tokenNumber].cssString = tokenStringforCSS
-  tokens[tokenNumber].id = tokenNumberString
+  tokens[uniqueKey].cssString = tokenStringforCSSClass
+  tokens[uniqueKey].id = tokenNumberString
 }
