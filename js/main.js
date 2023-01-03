@@ -4,7 +4,6 @@ import { generateTokens } from './tokens/generateToken.js'
 import { updateTokensPosition } from './tokens/updateTokensPosition.js'
 import { addPauseGameEventListeners, pauseGame, addStartGameEventListener } from './helpers/pauseGame.js'
 import { animateCharacterAtInterval } from './character/animateCharacter.js'
-import { SPEED } from './ground/globalVariables.js'
 import { loadEventListeners } from './eventListeners/eventListeners.js'
 
 setSecondGroundImageLeftValue()
