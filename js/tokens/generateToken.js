@@ -1,5 +1,5 @@
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js'
-import { SPEED } from '../ground/globalVariables.js'
+import { SPEED } from '../globalVariables.js'
 import { getGroundConatinerWidth } from '../ground/getGroundContainerWidth.js'
 import { gameIsPaused } from '../eventListeners/pauseGame.js'
 import { createTokenElement } from './createTokenElement.js'

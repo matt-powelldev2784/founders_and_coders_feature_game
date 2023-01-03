@@ -1,4 +1,4 @@
-import { groundImage1, groundImage2 } from './globalVariables.js'
+import { groundImage1, groundImage2 } from '../globalVariables.js'
 import { getGroundConatinerWidth } from './getGroundContainerWidth.js'
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js'
 

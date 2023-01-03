@@ -1,4 +1,4 @@
-import { SPEED } from '../ground/globalVariables.js'
+import { SPEED } from '../globalVariables.js'
 
 const animateCharacter = () => {
   const character = document.getElementById('main__char')

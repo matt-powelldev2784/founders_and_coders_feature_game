@@ -1,6 +1,6 @@
 import { setPropertyValue } from '../helpers/updateProperties.js'
 import { getPropertyValue } from '../helpers/updateProperties.js'
-import { groundImage1, SPEED } from './globalVariables.js'
+import { groundImage1, SPEED } from '../globalVariables.js'
 import { setSecondGroundImageLeftValue } from './setSecondGroundImageLeftValue.js'
 import { getGroundConatinerWidth } from './getGroundContainerWidth.js'
 
