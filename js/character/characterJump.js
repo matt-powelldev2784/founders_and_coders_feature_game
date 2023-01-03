@@ -1,12 +1,12 @@
-import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js'
+import { setPropertyValue } from '../helpers/updateProperties.js'
 import { jumnpOnKeyDown } from '../eventListeners/charcterJump.js'
-import { SPEED, DELTA } from '../globalVariables.js'
+import { DELTA } from '../globalVariables.js'
 
 export const characterJump = () => {
   document.removeEventListener('keydown', jumnpOnKeyDown)
   const character = document.getElementById('main__char')
 
-  const jumpTime = SPEED / 2
+  const jumpTime = 0.11 * DELTA
   setPropertyValue(character, 'animation', `jump ${jumpTime}s`)
 
   setTimeout(() => {
