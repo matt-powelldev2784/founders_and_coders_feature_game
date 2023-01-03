@@ -3,7 +3,7 @@ import { addPauseGameEventListeners, pauseGame, addStartGameEventListener } from
 import { setSecondGroundImagePosition } from './ground/setSecondGroundImagePosition.js'
 import { animateCharacterAtInterval } from './character/animateCharacter.js'
 import { SPEED } from './ground/globalVariables.js'
-import { updateTokens } from './tokens/updateTokens.js'
+import { updatePositionOfTokens } from './tokens/updatePositionOfTokens.js'
 import { generateTokens } from './tokens/generateToken.js'
 import { loadEventListeners } from './eventListeners/eventListeners.js'
 
@@ -24,7 +24,7 @@ export const updateGameFrame = (time) => {
   if (pauseGame === false) {
     const delta = time - lastTime
     updateGround(delta)
-    updateTokens(delta)
+    updatePositionOfTokens(delta)
     lastTime = time
     window.requestAnimationFrame(updateGameFrame)
   }

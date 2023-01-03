@@ -4,14 +4,15 @@ import { tokens } from './generateToken.js'
 export const createTokenElement = (img, uniqueKey) => {
   const bg_container = document.getElementById('bg_container')
   const tokenNumberString = `token${uniqueKey}`
-  const tokenStringforCSSClass = `.token${uniqueKey}`
-  const token = createElement('img', {
+  const tokenStringforCssClass = `.token${uniqueKey}`
+  const tokenElement = createElement('img', {
     class: tokenNumberString,
     id: tokenNumberString,
     src: img,
   })
-  bg_container.append(token)
+  bg_container.append(tokenElement)
 
-  tokens[uniqueKey].cssString = tokenStringforCSSClass
+  tokens[uniqueKey].cssString = tokenStringforCssClass
   tokens[uniqueKey].id = tokenNumberString
+  tokens[uniqueKey].element = document.getElementById(tokenNumberString)
 }
