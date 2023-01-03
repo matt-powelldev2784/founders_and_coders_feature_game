@@ -1,3 +1,20 @@
+@keyframes jump {
+  0% {
+    bottom: 23.5%;
+  }
+  25% {
+    bottom: 80%;
+    left: 14%;
+  }
+  50% {
+    bottom: 23.5%;
+    left: 16%;
+  }
+  100% {
+    left: 12%;
+  }
+}
+
 .main__char {
   position: absolute;
   bottom: 23.5%;

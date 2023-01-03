@@ -6,7 +6,7 @@ import { getGroundConatinerWidth } from './getGroundContainerWidth.js'
 
 export const updateGroundPosition = (delta) => {
   const firstGroundElementLeftValue = getPropertyValue(groundImage1, 'left')
-  const firstGroudnElementNewLeftValue = `${firstGroundElementLeftValue - delta * SPEED - 1}px`
+  const firstGroudnElementNewLeftValue = `${firstGroundElementLeftValue - delta * SPEED}px`
   setPropertyValue(groundImage1, 'left', firstGroudnElementNewLeftValue)
   setSecondGroundImageLeftValue()
 

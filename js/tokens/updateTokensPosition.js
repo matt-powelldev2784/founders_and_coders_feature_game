@@ -12,7 +12,7 @@ export const updateTokensPosition = (delta) => {
     }
 
     const tokenCurrentLeftPosition = getPropertyValue(element, 'left')
-    const tokenNewLeftPosition = `${tokenCurrentLeftPosition - delta * SPEED - 1}px`
+    const tokenNewLeftPosition = `${tokenCurrentLeftPosition - delta * SPEED}px`
     setPropertyValue(element, 'left', tokenNewLeftPosition)
     const tokenHasLeftScreenValue = -100
     const tokenLeftPositionAsNumber = tokenNewLeftPosition.slice(0, -2)

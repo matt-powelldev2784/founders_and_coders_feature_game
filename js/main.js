@@ -5,6 +5,7 @@ import { updateTokensPosition } from './tokens/updateTokensPosition.js'
 import { animateCharacterAtInterval } from './character/animateCharacter.js'
 import { loadEventListeners } from './eventListeners/eventListeners.js'
 import { gameIsPaused } from './eventListeners/pauseGame.js'
+import { setGlobalDelta } from './globalVariables.js'
 
 setSecondGroundImageLeftValue()
 loadEventListeners()
@@ -20,6 +21,7 @@ export const updateGameFrame = (time) => {
 
   if (gameIsPaused === false) {
     const delta = time - lastTime
+    setGlobalDelta(delta)
     updateGroundPosition(delta)
     updateTokensPosition(delta)
     lastTime = time
