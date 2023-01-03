@@ -13,13 +13,18 @@ export const addPauseGameEventListeners = () => {
 export const addStartGameEventListener = () => {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'r' && pauseGame === true) {
-      pauseGame = false
+      setGameToResume()
       window.requestAnimationFrame(updateGameFrame)
     }
   })
 }
 
 export const setGameToPause = () => {
-  console.log('Paused')
+  console.log('Game Paused')
   pauseGame = true
+}
+
+export const setGameToResume = () => {
+  console.log('Game Resumed')
+  pauseGame = false
 }
