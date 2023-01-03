@@ -1,4 +1,4 @@
-export const SPEED = 0.1
+export const SPEED = 0.5
 export let DELTA
 export const setGlobalDelta = (delta) => {
   DELTA = delta
