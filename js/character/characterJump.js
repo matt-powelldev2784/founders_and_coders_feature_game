@@ -6,11 +6,11 @@ export const characterJump = () => {
   document.removeEventListener('keydown', jumnpOnKeyDown)
   const character = document.getElementById('main__char')
 
-  const jumpTime = SPEED + 1 / DELTA
+  const jumpTime = SPEED / 2
   setPropertyValue(character, 'animation', `jump ${jumpTime}s`)
 
   setTimeout(() => {
     document.addEventListener('keydown', jumnpOnKeyDown)
     character.style.setProperty('animation', 'unset')
-  }, jumpTime * 500)
+  }, jumpTime * 1000)
 }
