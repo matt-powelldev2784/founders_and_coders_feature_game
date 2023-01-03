@@ -1,7 +1,7 @@
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js'
 import { SPEED } from '../ground/globalVariables.js'
 import { getGroundConatinerWidth } from '../ground/getGroundContainerWidth.js'
-import { pauseGame } from '../helpers/pauseGame.js'
+import { gameIsPaused } from '../eventListeners/pauseGame.js'
 import { createTokenElement } from './createTokenElement.js'
 import { addCssRuleForToken } from './addCSSRuleForToken.js'
 
@@ -11,7 +11,7 @@ export const tokens = []
 
 export const generateTokens = () => {
   setInterval(() => {
-    if (pauseGame === false) {
+    if (gameIsPaused === false) {
       generateToken('./img/logos/youtube_logo.svg', currentTokenNumber)
     }
   }, Math.random() * SPEED + 5000)

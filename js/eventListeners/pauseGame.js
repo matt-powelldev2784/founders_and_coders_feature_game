@@ -1,8 +1,8 @@
 import { updateGameFrame } from '../main.js'
 
-export let pauseGame = false
+export let gameIsPaused = false
 
-export const addPauseGameEventListeners = () => {
+export const addPauseGameEventListener = () => {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'p' && pauseGame === false) {
       setGameToPause()
@@ -10,7 +10,7 @@ export const addPauseGameEventListeners = () => {
   })
 }
 
-export const addStartGameEventListener = () => {
+export const addResumeGameEventListener = () => {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'r' && pauseGame === true) {
       setGameToResume()
@@ -21,10 +21,10 @@ export const addStartGameEventListener = () => {
 
 export const setGameToPause = () => {
   console.log('Game Paused')
-  pauseGame = true
+  gameIsPaused = true
 }
 
 export const setGameToResume = () => {
   console.log('Game Resumed')
-  pauseGame = false
+  gameIsPaused = false
 }
