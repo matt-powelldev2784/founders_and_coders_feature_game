@@ -3,7 +3,7 @@ import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.
 import { SPEED } from '../ground/globalVariables.js'
 import { getGroundConatinerWidth } from '../ground/getGroundContainerWidth.js'
 
-export const updatePositionOfTokens = (delta) => {
+export const updateTokensPosition = (delta) => {
   tokens.forEach((token) => {
     const { element, endOfLife } = token
 
