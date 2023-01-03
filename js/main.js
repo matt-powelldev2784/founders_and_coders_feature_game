@@ -5,9 +5,10 @@ import { animateCharacterAtInterval } from './character/animateCharacter.js'
 import { SPEED } from './ground/globalVariables.js'
 import { updateTokens } from './tokens/updateTokens.js'
 import { generateTokens } from './tokens/generateToken.js'
+import { loadEventListeners } from './eventListeners/eventListeners.js'
 
 setSecondGroundImagePosition()
-document.addEventListener('resize', setSecondGroundImagePosition)
+loadEventListeners()
 addPauseGameEventListeners()
 addStartGameEventListener()
 animateCharacterAtInterval()

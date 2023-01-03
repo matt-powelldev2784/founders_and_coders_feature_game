@@ -5,7 +5,7 @@ export let pauseGame = false
 export const addPauseGameEventListeners = () => {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'p' && pauseGame === false) {
-      pauseGame = true
+      setGameToPause()
     }
   })
 }
@@ -17,4 +17,9 @@ export const addStartGameEventListener = () => {
       window.requestAnimationFrame(updateGameFrame)
     }
   })
+}
+
+export const setGameToPause = () => {
+  console.log('Paused')
+  pauseGame = true
 }
