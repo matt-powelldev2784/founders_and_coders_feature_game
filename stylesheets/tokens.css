@@ -16,11 +16,12 @@
   display: block;
   margin: 0 auto;
   width: 2rem;
+  padding: 0.1rem;
 }
 
 .token__text {
   font-family: 'Berkelium Bitmap', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-align: center;
   overflow: hidden;
 }

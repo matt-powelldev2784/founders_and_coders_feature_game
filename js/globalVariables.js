@@ -1,5 +1,5 @@
 //Every double of speed = gravity divided by 4
-export const SPEED = 0.6;
+export const SPEED = 0.5;
 
 export let DELTA;
 export const setGlobalDelta = (delta) => {
