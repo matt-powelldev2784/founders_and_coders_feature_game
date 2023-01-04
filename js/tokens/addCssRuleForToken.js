@@ -10,7 +10,6 @@ export const addCssRuleForToken = (className) => {
     `position: absolute;
      bottom: ${bottom}%;
      left: 2000px;
-     width: 10%;
-     height: 10%;`
+     `
   );
 };
