@@ -1,5 +1,5 @@
 import { createElement } from './createElement.js';
-import { tokens } from './generateToken.js';
+import { tokens } from './generateTokens.js';
 
 export const createTokenElement = (img, uniqueKey) => {
   const bg_container = document.getElementById('bg_container');

@@ -1,4 +1,4 @@
-import { tokens } from '../tokens/generateToken.js';
+import { tokens } from '../tokens/generateTokens.js';
 import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { score, setScore } from '../globalVariables.js';
