@@ -6,6 +6,7 @@ import { animateCharacterAtInterval } from './character/animateCharacter.js'
 import { loadEventListeners } from './eventListeners/eventListeners.js'
 import { gameIsPaused } from './eventListeners/pauseGame.js'
 import { setGlobalDelta } from './globalVariables.js'
+import { getTokenBoundingRects } from './tokens/getTokensBoudningRects.js'
 
 setSecondGroundImageLeftValue()
 loadEventListeners()
@@ -24,6 +25,7 @@ export const updateGameFrame = (time) => {
     setGlobalDelta(delta)
     updateGroundPosition(delta)
     updateTokensPosition(delta)
+    getTokenBoundingRects()
     lastTime = time
     window.requestAnimationFrame(updateGameFrame)
   }
