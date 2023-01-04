@@ -8,8 +8,5 @@ export const detectBoundingRectCollision = (rect1, rect2) => {
     rect1.top > rect2.bottom
   );
 
-  // if (collision) {
-  //   console.log('collision', collision);
-  // }
   return collision;
 };
