@@ -8,8 +8,11 @@ export const addCssRuleForToken = (className) => {
     tokenStylesheet,
     className,
     `position: absolute;
+     width: fit-content;
+     align-items: center;
      bottom: ${bottom}%;
      left: 2000px;
+     z-index: 1; 
      `
   );
 };

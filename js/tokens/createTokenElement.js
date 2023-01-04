@@ -5,11 +5,18 @@ export const createTokenElement = (img, uniqueKey) => {
   const bg_container = document.getElementById('bg_container');
   const tokenNumberString = `token${uniqueKey}`;
   const tokenStringforCssClass = `.token${uniqueKey}`;
-  const tokenElement = createElement('img', {
-    class: tokenNumberString,
-    id: tokenNumberString,
-    src: img,
-  });
+  const imgElement = createElement('img', { src: img, class: 'token_img' });
+  const textElement = createElement('p', { class: 'token__text' }, 'YouTube');
+  const tokenElement = createElement(
+    'div',
+    {
+      class: tokenNumberString,
+      id: tokenNumberString,
+    },
+    imgElement,
+    textElement
+  );
+
   bg_container.append(tokenElement);
 
   tokens[uniqueKey].cssString = tokenStringforCssClass;

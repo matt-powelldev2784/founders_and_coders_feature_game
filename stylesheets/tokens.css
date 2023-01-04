@@ -2,7 +2,25 @@
   position: absolute;
   bottom: 45%;
   right: -200px;
-  width: 10%;
-  height: 10%;
   z-index: 1;
+}
+
+.token__container {
+  position: absolute;
+  width: fit-content;
+  align-items: center;
+  z-index: 1;
+}
+
+.token_img {
+  display: block;
+  margin: 0 auto;
+  width: 2rem;
+}
+
+.token__text {
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 0.6rem;
+  text-align: center;
+  overflow: hidden;
 }
