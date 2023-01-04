@@ -1,38 +1,40 @@
-import { updateGroundPosition } from './ground/updateGroundPosition.js'
-import { setSecondGroundImageLeftValue } from './ground/setSecondGroundImageLeftValue.js'
-import { generateTokens } from './tokens/generateToken.js'
-import { updateTokensPosition } from './tokens/updateTokensPosition.js'
-import { animateCharacterAtInterval } from './character/animateCharacter.js'
-import { loadEventListeners } from './eventListeners/eventListeners.js'
-import { gameIsPaused } from './eventListeners/pauseGame.js'
-import { setGlobalDelta } from './globalVariables.js'
-import { getGameElementBoundingRects } from './gameElementBoundingRects/getGameElementBoundingRects.js'
-import { tokens } from './tokens/generateToken.js'
-import { charcter } from './character/character.js'
+import { updateGroundPosition } from './ground/updateGroundPosition.js';
+import { setSecondGroundImageLeftValue } from './ground/setSecondGroundImageLeftValue.js';
+import { generateTokens } from './tokens/generateToken.js';
+import { updateTokensPosition } from './tokens/updateTokensPosition.js';
+import { animateCharacterAtInterval } from './character/animateCharacter.js';
+import { loadEventListeners } from './eventListeners/eventListeners.js';
+import { gameIsPaused } from './eventListeners/pauseGame.js';
+import { setGlobalDelta } from './globalVariables.js';
+import { getGameElementBoundingRects } from './gameElementBoundingRects/getGameElementBoundingRects.js';
+import { tokens } from './tokens/generateToken.js';
+import { character } from './character/character.js';
+import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 
-setSecondGroundImageLeftValue()
-loadEventListeners()
-animateCharacterAtInterval()
+setSecondGroundImageLeftValue();
+loadEventListeners();
+animateCharacterAtInterval();
 
-let lastTime
+let lastTime;
 export const updateGameFrame = (time) => {
   if (lastTime == null) {
-    lastTime = time
-    window.requestAnimationFrame(updateGameFrame)
-    return
+    lastTime = time;
+    window.requestAnimationFrame(updateGameFrame);
+    return;
   }
 
   if (gameIsPaused === false) {
-    const delta = time - lastTime
-    setGlobalDelta(delta)
-    updateGroundPosition(delta)
-    updateTokensPosition(delta)
-    getGameElementBoundingRects(tokens)
-    getGameElementBoundingRects(charcter)
-    lastTime = time
-    window.requestAnimationFrame(updateGameFrame)
+    const delta = time - lastTime;
+    setGlobalDelta(delta);
+    updateGroundPosition(delta);
+    updateTokensPosition(delta);
+    getGameElementBoundingRects(tokens);
+    getGameElementBoundingRects(character);
+    handleTokenAndCharacterCollision();
+    lastTime = time;
+    window.requestAnimationFrame(updateGameFrame);
   }
-}
-window.requestAnimationFrame(updateGameFrame)
+};
+window.requestAnimationFrame(updateGameFrame);
 
-generateTokens()
+generateTokens();
