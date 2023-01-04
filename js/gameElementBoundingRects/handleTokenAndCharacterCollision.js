@@ -5,7 +5,7 @@ import { score, setScore } from '../globalVariables.js';
 
 export const handleTokenAndCharacterCollision = () => {
   tokens.forEach((token) => {
-    const { endOfLife, element } = token;
+    const { endOfLife, element, points } = token;
     if (endOfLife) return;
 
     const tokenBoundingRect = token.boundingRect;
@@ -15,7 +15,7 @@ export const handleTokenAndCharacterCollision = () => {
     if (collision) {
       token.endOfLife = true;
       element.remove();
-      setScore(score + 100);
+      setScore(score + points);
       const scoreElement = document.getElementById('main__score');
       scoreElement.textContent = score;
     }
