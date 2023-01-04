@@ -11,6 +11,12 @@ import { tokens } from './tokens/generateToken.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 
+const eightBitFontStylesheet = document.styleSheets[4];
+console.log('eightBitFontStylesheet', eightBitFontStylesheet);
+eightBitFontStylesheet.onload = () => {
+  console.log('a');
+};
+
 setSecondGroundImageLeftValue();
 loadEventListeners();
 animateCharacterAtInterval();

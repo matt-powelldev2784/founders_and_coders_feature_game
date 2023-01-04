@@ -32,11 +32,32 @@
   height: 100%;
 }
 
-.main__score {
+.main__score_container {
   position: absolute;
-  right: 5rem;
+  right: 1rem;
   top: 1rem;
-  font-size: 3rem;
-  color: white;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
   z-index: 1;
+}
+
+.main__score_title {
+  position: relative;
+  font-family: 'DePixel', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  background: black;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+.main__score {
+  position: relative;
+  font-family: 'DePixel', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  background: black;
+  padding: 0rem 0.5rem 0rem 1rem;
 }
