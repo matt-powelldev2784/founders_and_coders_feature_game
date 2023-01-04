@@ -1,1 +1,0 @@
-const score = 0;

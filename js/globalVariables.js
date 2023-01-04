@@ -1,10 +1,15 @@
 //Every double of speed = gravity divided by 4
-export const SPEED = 0.6
+export const SPEED = 0.6;
 
-export let DELTA
+export let DELTA;
 export const setGlobalDelta = (delta) => {
-  DELTA = delta
-}
+  DELTA = delta;
+};
 
-export const groundImage1 = document.getElementsByClassName('main__tree_bg1')[0]
-export const groundImage2 = document.getElementsByClassName('main__tree_bg2')[0]
+export let score = 0;
+export const setScore = (newScore) => {
+  score = newScore;
+};
+
+export const groundImage1 = document.getElementsByClassName('main__tree_bg1')[0];
+export const groundImage2 = document.getElementsByClassName('main__tree_bg2')[0];

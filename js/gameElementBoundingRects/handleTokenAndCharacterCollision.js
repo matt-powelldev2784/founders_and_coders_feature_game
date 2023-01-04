@@ -1,6 +1,7 @@
 import { tokens } from '../tokens/generateToken.js';
 import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
+import { score, setScore } from '../globalVariables.js';
 
 export const handleTokenAndCharacterCollision = () => {
   tokens.forEach((token) => {
@@ -14,6 +15,9 @@ export const handleTokenAndCharacterCollision = () => {
     if (collision) {
       token.endOfLife = true;
       element.remove();
+      setScore(score + 100);
+      const scoreElement = document.getElementById('main__score');
+      scoreElement.textContent = score;
     }
   });
 };
