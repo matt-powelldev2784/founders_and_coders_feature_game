@@ -31,3 +31,12 @@
   transform: translateY(-50%);
   height: 100%;
 }
+
+.main__score {
+  position: absolute;
+  right: 5rem;
+  top: 1rem;
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+}
