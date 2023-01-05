@@ -3,6 +3,7 @@ import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
 import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
+import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 
 export const handleTokenAndVirusCollision = () => {
   viruses.forEach((virus) => {
@@ -16,6 +17,7 @@ export const handleTokenAndVirusCollision = () => {
     if (collision) {
       virus.endOfLife = true;
       setGameToPause();
+      removeResumeGameEventListener();
       displayGameOverScreen();
     }
   });

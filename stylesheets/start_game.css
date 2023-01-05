@@ -43,36 +43,3 @@
     height: auto;
   }
 }
-
-.start_game__tokens_conatiner {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border: 1px solid red;
-}
-
-.start_game__token {
-  position: relative;
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  border: 3px solid green;
-}
-
-.game_over_screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-}
-
-.game_over_img {
-  width: 50%;
-  height: 50%;
-}

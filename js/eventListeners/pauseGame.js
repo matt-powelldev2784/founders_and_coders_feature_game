@@ -1,30 +1,38 @@
-import { updateGameFrame } from '../main.js'
+import { updateGameFrame } from '../main.js';
 
-export let gameIsPaused = false
+export let gameIsPaused = false;
 
 export const addPauseGameEventListener = () => {
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'p' && gameIsPaused === false) {
-      setGameToPause()
-    }
-  })
-}
+  document.addEventListener('keydown', pauseGame);
+};
 
 export const addResumeGameEventListener = () => {
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'r' && gameIsPaused === true) {
-      setGameToResume()
-      window.requestAnimationFrame(updateGameFrame)
-    }
-  })
-}
+  document.addEventListener('keydown', resumeGame);
+};
+
+const pauseGame = (event) => {
+  if (event.key === 'p' && gameIsPaused === false) {
+    setGameToPause();
+  }
+};
+
+const resumeGame = (event) => {
+  if (event.key === 'r' && gameIsPaused === true) {
+    setGameToResume();
+    window.requestAnimationFrame(updateGameFrame);
+  }
+};
+
+export const removeResumeGameEventListener = () => {
+  document.removeEventListener('keydown', resumeGame);
+};
 
 export const setGameToPause = () => {
-  console.log('Game Paused')
-  gameIsPaused = true
-}
+  console.log('Game Paused');
+  gameIsPaused = true;
+};
 
 export const setGameToResume = () => {
-  console.log('Game Resumed')
-  gameIsPaused = false
-}
+  console.log('Game Resumed');
+  gameIsPaused = false;
+};
