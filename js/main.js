@@ -40,6 +40,10 @@ export const updateGameFrame = (time) => {
     window.requestAnimationFrame(updateGameFrame);
   }
 };
-window.requestAnimationFrame(updateGameFrame);
 
-generateGameElements();
+const startGame = () => {
+  const startScreen = document.getElementById('start_game__bg');
+  startGame.remove();
+  window.requestAnimationFrame(updateGameFrame);
+  generateGameElements();
+};

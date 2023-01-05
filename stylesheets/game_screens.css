@@ -1,3 +1,65 @@
+.start_game__bg {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.start_game__conatiner {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.start_game__title {
+  margin-top: 6rem;
+  width: clamp(50rem, 70vw, 55rem);
+  height: auto;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 992px) {
+  .start_game__title {
+    width: clamp(90%, 70vw, 90%);
+  }
+}
+
+.start_game__button {
+  width: clamp(8rem, 30vw, 15rem);
+  height: auto;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 992px) {
+  .start_game__button {
+    width: clamp(6rem, 30vw, 10rem);
+    height: auto;
+  }
+}
+
+.start_game__tokens_conatiner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid red;
+}
+
+.start_game__token {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid green;
+}
+
 .game_over_screen {
   position: absolute;
   top: 0;
