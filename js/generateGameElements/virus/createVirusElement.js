@@ -1,4 +1,4 @@
-import { createElement } from '../helpers/createElement.js';
+import { createElement } from '../../helpers/createElement.js';
 import { viruses } from './generateVirus.js';
 
 export const createVirusElement = (virusType, uniqueKey) => {

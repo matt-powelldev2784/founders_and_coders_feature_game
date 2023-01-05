@@ -1,4 +1,4 @@
-import { createElement } from '../helpers/createElement.js';
+import { createElement } from '../../helpers/createElement.js';
 import { tokens } from './generateToken.js';
 
 export const createTokenElement = (tokenType, uniqueKey) => {
