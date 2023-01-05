@@ -1,12 +1,12 @@
-import { addCSSRule } from '../helpers/addCssRule.js';
+import { addCSSRule } from '../../helpers/addCssRule.js';
 
 export const addCssRuleForToken = (className) => {
   const bottom = 23.5 + Math.random() * 55;
 
-  const tokenStylesheet = document.styleSheets[2];
+  const gameElementsStylesheet = document.styleSheets[2];
 
   addCSSRule(
-    tokenStylesheet,
+    gameElementsStylesheet,
     className,
     `position: absolute;
      width: fit-content;

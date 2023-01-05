@@ -1,5 +1,5 @@
 import { createTokenElement } from './createTokenElement.js';
-import { addCssRuleForToken } from './addCSSRuleForToken.js';
+import { addCssRuleForToken } from './addCssRuleForToken.js';
 
 let currentTokenNumber = 0;
 

@@ -25,3 +25,12 @@
   text-align: center;
   overflow: hidden;
 }
+
+.virus {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  bottom: 25%;
+  right: -2000px;
+  z-index: 1;
+}

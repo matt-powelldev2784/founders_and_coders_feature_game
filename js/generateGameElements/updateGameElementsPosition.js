@@ -1,10 +1,10 @@
-import { tokens } from './generateToken.js';
+import { tokens } from './token/generateToken.js';
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js';
 import { SPEED } from '../globalVariables.js';
 
-export const updateTokensPosition = (delta) => {
-  tokens.forEach((token) => {
-    const { element, endOfLife } = token;
+export const updateGameElementsPosition = (delta, gameElements) => {
+  gameElements.forEach((gameElement) => {
+    const { element, endOfLife } = gameElement;
 
     if (endOfLife) {
       return;
@@ -17,7 +17,7 @@ export const updateTokensPosition = (delta) => {
     const tokenLeftPositionAsNumber = tokenNewLeftPosition.slice(0, -2);
 
     if (tokenLeftPositionAsNumber < tokenHasLeftScreenValue) {
-      token.endOfLife = true;
+      gameElement.endOfLife = true;
       element.remove();
     }
   });
