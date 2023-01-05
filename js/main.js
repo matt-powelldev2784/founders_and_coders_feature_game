@@ -13,10 +13,6 @@ import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
 
-setSecondGroundImageLeftValue();
-loadEventListeners();
-animateCharacterAtInterval();
-
 let lastTime;
 export const updateGameFrame = (time) => {
   if (lastTime == null) {
@@ -41,9 +37,13 @@ export const updateGameFrame = (time) => {
   }
 };
 
-const startGame = () => {
+export const startGame = () => {
   const startScreen = document.getElementById('start_game__bg');
-  startGame.remove();
+  startScreen.remove();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
 };
+
+setSecondGroundImageLeftValue();
+loadEventListeners();
+animateCharacterAtInterval();
