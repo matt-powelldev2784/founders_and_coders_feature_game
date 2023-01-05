@@ -29,6 +29,12 @@ export const tokenTypes = [
     text: 'NODEJS',
     points: 1000,
   },
+  {
+    key: 5,
+    img: './img/tokens/virus.svg',
+    text: '',
+    points: 0,
+  },
 ];
 
 const getRandomWholeNumber = (min, max) => {

@@ -1,18 +1,16 @@
-import { SPEED } from '../globalVariables.js'
-
 const animateCharacter = () => {
-  const character = document.getElementById('main__char')
-  const currentCharacter = character.getAttribute('src').slice(6, -4)
+  const character = document.getElementById('main__char');
+  const currentCharacter = character.getAttribute('src').slice(6, -4);
 
   if (currentCharacter === 'charA') {
-    character.setAttribute('src', './img/charB.svg')
+    character.setAttribute('src', './img/charB.svg');
   } else {
-    character.setAttribute('src', './img/charA.svg')
+    character.setAttribute('src', './img/charA.svg');
   }
-}
+};
 
 export const animateCharacterAtInterval = () => {
   setInterval(() => {
-    animateCharacter()
-  }, 300)
-}
+    animateCharacter();
+  }, 300);
+};

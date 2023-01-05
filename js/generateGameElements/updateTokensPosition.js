@@ -1,7 +1,6 @@
-import { tokens } from './generateTokens.js';
+import { tokens } from './generateToken.js';
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js';
 import { SPEED } from '../globalVariables.js';
-import { getGroundConatinerWidth } from '../ground/getGroundContainerWidth.js';
 
 export const updateTokensPosition = (delta) => {
   tokens.forEach((token) => {

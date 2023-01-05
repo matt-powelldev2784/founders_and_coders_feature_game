@@ -61,3 +61,12 @@
   background: black;
   padding: 0rem 0.5rem 0rem 1rem;
 }
+
+.virus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 8rem;
+  height: 8rem;
+  z-index: 1;
+}

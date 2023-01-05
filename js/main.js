@@ -1,13 +1,13 @@
 import { updateGroundPosition } from './ground/updateGroundPosition.js';
 import { setSecondGroundImageLeftValue } from './ground/setSecondGroundImageLeftValue.js';
-import { generateTokens } from './tokens/generateTokens.js';
-import { updateTokensPosition } from './tokens/updateTokensPosition.js';
+import { generateGameElements } from './generateGameElements/generateGameElements.js';
+import { updateTokensPosition } from './generateGameElements/updateTokensPosition.js';
 import { animateCharacterAtInterval } from './character/animateCharacter.js';
 import { loadEventListeners } from './eventListeners/eventListeners.js';
 import { gameIsPaused } from './eventListeners/pauseGame.js';
 import { setGlobalDelta } from './globalVariables.js';
 import { getGameElementBoundingRects } from './gameElementBoundingRects/getGameElementBoundingRects.js';
-import { tokens } from './tokens/generateTokens.js';
+import { tokens } from './generateGameElements/generateToken.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 
@@ -37,4 +37,4 @@ export const updateGameFrame = (time) => {
 };
 window.requestAnimationFrame(updateGameFrame);
 
-generateTokens();
+generateGameElements();

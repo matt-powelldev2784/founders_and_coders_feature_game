@@ -1,5 +1,5 @@
 import { createElement } from './createElement.js';
-import { tokens } from './generateTokens.js';
+import { tokens } from './generateToken.js';
 
 export const createTokenElement = (tokenType, uniqueKey) => {
   const { img, text, points } = tokenType;
