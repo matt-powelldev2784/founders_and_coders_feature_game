@@ -21,5 +21,4 @@ export const updateGameElementsPosition = (delta, gameElements) => {
       element.remove();
     }
   });
-  console.log('gameElements', gameElements);
 };

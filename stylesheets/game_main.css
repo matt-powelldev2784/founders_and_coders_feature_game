@@ -44,8 +44,8 @@
 
 .main__score_title {
   position: relative;
-  font-family: 'DePixel', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 1.2rem;
   text-align: center;
   color: white;
   background: black;
@@ -54,10 +54,10 @@
 
 .main__score {
   position: relative;
-  font-family: 'DePixel', sans-serif;
-  font-size: 3rem;
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 2rem;
   text-align: center;
   color: white;
   background: black;
-  padding: 0rem 0.5rem 0rem 1rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }

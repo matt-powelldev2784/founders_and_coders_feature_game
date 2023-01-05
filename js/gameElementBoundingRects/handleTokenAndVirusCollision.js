@@ -2,6 +2,7 @@ import { viruses } from '../generateGameElements/virus/generateVirus.js';
 import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
+import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
 
 export const handleTokenAndVirusCollision = () => {
   viruses.forEach((virus) => {
@@ -15,6 +16,7 @@ export const handleTokenAndVirusCollision = () => {
     if (collision) {
       virus.endOfLife = true;
       setGameToPause();
+      displayGameOverScreen();
     }
   });
 };

@@ -1,0 +1,16 @@
+.game_over_screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.game_over_img {
+  width: 50%;
+  height: 50%;
+}
