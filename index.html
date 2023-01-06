@@ -16,7 +16,7 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body id="body">
-    <section id="start_game__bg">
+    <section class="start_game__screen" id="start_game__bg">
       <div class="instructions__container" id="instructions__container">
         <div class="instructions">
           <div class="instruction__item">
@@ -49,9 +49,18 @@
       </div>
 
       <img class="start_game__bg" src="./img/start_screen.jpg" />
-      <div class="start_game__conatiner">
-        <img class="start_game__title" src="./img/junior_dev_man_title.png" />
-        <img class="start_game__button" id="start_game__button" src="./img/start_button.svg" />
+      <div class="start_game__wrapper">
+        <div class="start_game__conatiner">
+          <img class="start_game__title" src="./img/junior_dev_man_title.png" />
+          <div class="start_game__buttons_container">
+            <img class="start_game__button" id="start_game__button" src="./img/start_button.svg" />
+            <img
+              class="instructions__button"
+              id="instructions__button"
+              src="./img/instructions_button.svg"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
