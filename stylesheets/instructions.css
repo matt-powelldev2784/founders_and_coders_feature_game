@@ -1,18 +1,78 @@
-.instructions____tokens_conatiner {
+.instructions__container {
+  position: absolute;
+  display: block;
+  top: 0;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  z-index: -1;
 }
 
-.instructions____tokens_conatiner {
-  position: relative;
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  width: clamp(60rem, 90vw, 90rem);
+  height: auto;
+  flex-shrink: 0;
+  background: #969696;
+  border-radius: 1rem;
+  padding: 4vw;
+  margin: 1rem auto;
+  z-index: -1;
+}
+@media only screen and (max-width: 992px) {
+  .instructions {
+    width: clamp(90%, 70vw, 90%);
+  }
+}
+
+.instruction__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.instructions__text {
+  color: white;
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.instructions__tokens_container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.instructions____token {
+.instructions__token {
   position: relative;
   display: block;
   width: 3rem;
   height: 3rem;
-  border: 3px solid green;
+}
+
+.instructions__virus {
+  width: 6rem;
+  height: 6rem;
+}
+
+.instructions__char {
+  width: 8rem;
+  height: 8rem;
 }

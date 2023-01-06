@@ -12,6 +12,7 @@ import { viruses } from './generateGameElements/virus/generateVirus.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
+import { removeStartScreenEventListeners } from './eventListeners/startScreen.js';
 
 let lastTime;
 export const updateGameFrame = (time) => {
@@ -40,6 +41,7 @@ export const updateGameFrame = (time) => {
 export const startGame = () => {
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
+  removeStartScreenEventListeners();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
 };

@@ -11,19 +11,19 @@
   min-width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: safe;
+  justify-content: safe center;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 2vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .start_game__title {
-  margin-top: 6rem;
   width: clamp(50rem, 70vw, 55rem);
   height: auto;
+  margin-top: 2rem;
   flex-shrink: 0;
 }
 @media only screen and (max-width: 992px) {
@@ -36,6 +36,7 @@
   width: clamp(8rem, 30vw, 15rem);
   height: auto;
   flex-shrink: 0;
+  margin-bottom: 2rem;
 }
 @media only screen and (max-width: 992px) {
   .start_game__button {

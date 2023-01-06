@@ -17,21 +17,43 @@
   </head>
   <body id="body">
     <section id="start_game__bg">
+      <div class="instructions__container" id="instructions__container">
+        <div class="instructions">
+          <div class="instruction__item">
+            <p class="instructions__text">Use the space bar to make Junior Dev Man jump.</p>
+            <div class="instructions__tokens_container">
+              <img class="instructions__char" src="./img/space_bar.svg" />
+              <img class="instructions__virus" src="./img/charA.svg" />
+            </div>
+          </div>
+          <div class="instruction__item">
+            <p class="instructions__text">Collect the following tokens to accumulate ponits:</p>
+            <div class="instructions__tokens_container">
+              <img class="instructions__token" src="./img/tokens/css_logo_8bit.png" />
+              <img class="instructions__token" src="./img/tokens/html_icon_8bit.png" />
+              <img class="instructions__token" src="./img/tokens/js_logo_8bit.png" />
+              <img class="instructions__token" src="./img/tokens/node_js_8bit.png" />
+              <img class="instructions__token" src="./img/tokens/react_logo_8bit.png" />
+            </div>
+          </div>
+          <div class="instruction__item">
+            <p class="instructions__text">
+              Jump over the viruses. You will lose the game if you come into contact with a virus.
+            </p>
+            <div class="instructions__tokens_container">
+              <img class="instructions__virus" src="./img/tokens/virus.svg" />
+            </div>
+          </div>
+          <p class="instructions__text">Press esc to hide instructions...</p>
+        </div>
+      </div>
+
       <img class="start_game__bg" src="./img/start_screen.jpg" />
       <div class="start_game__conatiner">
         <img class="start_game__title" src="./img/junior_dev_man_title.png" />
         <img class="start_game__button" id="start_game__button" src="./img/start_button.svg" />
       </div>
     </section>
-
-    <!-- <div class="instructions__container"></div>
-    <div class="instructions____tokens_conatiner">
-      <img class="instructions____token" src="./img/tokens/css_logo_8bit.png" />
-      <img class="instructions____token" src="./img/tokens/html_icon_8bit.png" />
-      <img class="instructions____token" src="./img/tokens/js_logo_8bit.png" />
-      <img class="instructions____token" src="./img/tokens/node_js_8bit.png" />
-      <img class="instructions____token" src="./img/tokens/react_logo_8bit.png" />
-    </div> -->
 
     <section class="main__game_container" id="main__game_container">
       <div class="bg_container" id="bg_container">
