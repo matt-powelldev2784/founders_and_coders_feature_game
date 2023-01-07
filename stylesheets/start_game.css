@@ -14,6 +14,7 @@
 }
 
 .start_game__wrapper {
+  display: block;
   height: 100vh;
   overflow: auto;
 }

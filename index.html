@@ -16,7 +16,12 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body id="body">
+    <!--.......................................................................-->
+    <!--.......................................................................-->
     <section class="start_game__screen" id="start_game__bg">
+      <!--.......................................................................-->
+      <img class="start_game__bg" src="./img/start_screen.jpg" />
+      <!--.......................................................................-->
       <div class="instructions__container" id="instructions__container">
         <div class="instructions">
           <div class="instruction__item">
@@ -44,12 +49,14 @@
               <img class="instructions__virus" src="./img/tokens/virus.svg" />
             </div>
           </div>
-          <p class="instructions__text">Press esc to hide instructions...</p>
+          <p class="instructions__text" id="instructions__text">
+            Press esc to hide instructions...
+          </p>
         </div>
       </div>
-
-      <img class="start_game__bg" src="./img/start_screen.jpg" />
-      <div class="start_game__wrapper">
+      <!--.......................................................................-->
+      <!--.......................................................................-->
+      <div class="start_game__wrapper" id="start_game__wrapper">
         <div class="start_game__conatiner">
           <img class="start_game__title" src="./img/junior_dev_man_title.png" />
           <!--.......................................................................-->
@@ -74,13 +81,14 @@
             </div>
           </div>
           <!--.......................................................................-->
-          <p class="start_screen__text">
+          <p class="start_screen__text" id="start_screen__text">
             Use up/down arrows to navigate the menu and enter key to select.
           </p>
         </div>
       </div>
     </section>
-
+    <!--.......................................................................-->
+    <!--.......................................................................-->
     <section class="main__game_container" id="main__game_container">
       <div class="bg_container" id="bg_container">
         <div class="main__score_container" id="main__score_container">
