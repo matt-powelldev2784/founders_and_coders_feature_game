@@ -9,7 +9,6 @@ export const addCssRuleForToken = (className) => {
     gameElementsStylesheet,
     className,
     `position: absolute;
-     width: fit-content;
      align-items: center;
      bottom: ${bottom}%;
      left: 2000px;
