@@ -12,7 +12,6 @@ import { viruses } from './generateGameElements/virus/generateVirus.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
-import { removeInstructionsEventListeners } from './eventListeners/instructions.js';
 
 let lastTime;
 export const updateGameFrame = (time) => {
@@ -22,9 +21,10 @@ export const updateGameFrame = (time) => {
     return;
   }
 
+  const delta = time - lastTime;
+  setGlobalDelta(delta);
+
   if (gameIsPaused === false) {
-    const delta = time - lastTime;
-    setGlobalDelta(delta);
     updateGroundPosition(delta);
     updateGameElementsPosition(delta, tokens);
     updateGameElementsPosition(delta, viruses);
@@ -33,9 +33,10 @@ export const updateGameFrame = (time) => {
     getGameElementBoundingRects(viruses);
     handleTokenAndCharacterCollision();
     handleTokenAndVirusCollision();
-    lastTime = time;
-    window.requestAnimationFrame(updateGameFrame);
   }
+
+  lastTime = time;
+  window.requestAnimationFrame(updateGameFrame);
 };
 
 setSecondGroundImageLeftValue();

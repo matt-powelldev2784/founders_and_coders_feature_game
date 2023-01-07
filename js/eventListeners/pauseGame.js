@@ -1,4 +1,5 @@
 import { updateGameFrame } from '../main.js';
+import { addCharacterJumpEventListener } from './charcterJump.js';
 
 export let gameIsPaused = false;
 
@@ -19,7 +20,6 @@ const pauseGame = (event) => {
 const resumeGame = (event) => {
   if (event.key === 'r' && gameIsPaused === true) {
     setGameToResume();
-    window.requestAnimationFrame(updateGameFrame);
   }
 };
 
