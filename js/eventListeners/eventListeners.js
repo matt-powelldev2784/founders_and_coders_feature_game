@@ -5,14 +5,14 @@ import {
 } from './pauseGame.js';
 import { addCharacterJumpEventListener } from './charcterJump.js';
 import { displayScore } from './displayScore.js';
-import { loadStartGameEventListner } from './loadStartGameEventListner.js';
-import { addStartScreenEventListeners } from './startScreen.js';
+import { loadStartGameEventListeners } from './startGame.js';
+import { addInstructionsEventListeners } from './instructions.js';
 
 export const loadEventListeners = () => {
-  loadStartGameEventListner();
-  addStartScreenEventListeners();
+  addInstructionsEventListeners();
   window.addEventListener('resize', setGameToPause);
   window.addEventListener('load', displayScore);
+  loadStartGameEventListeners();
   addPauseGameEventListener();
   addResumeGameEventListener();
   addCharacterJumpEventListener();

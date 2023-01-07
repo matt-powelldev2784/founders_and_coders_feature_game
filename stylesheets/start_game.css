@@ -38,39 +38,40 @@
 }
 @media only screen and (max-width: 992px) {
   .start_game__title {
-    width: clamp(90%, 70vw, 90%);
+    width: clamp(15rem, 75vw, 90%);
   }
 }
 
-.start_game__buttons_container {
+.button_container {
   display: flex;
-  justify-content: safe center;
   align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
 
-.start_game__button {
+.start_game_img {
   width: auto;
   height: clamp(3rem, 5vw, 5rem);
   flex-shrink: 0;
 }
-@media only screen and (max-width: 992px) {
-  .start_game__button {
-    width: auto;
-    height: clamp(3rem, 5vw, 5rem);
-  }
+
+.start_game__button_start {
+  border: none;
+  background: none;
+}
+.start_game__button_start:focus {
+  border: 3px solid green;
 }
 
-.instructions__button {
-  width: auto;
-  height: clamp(3rem, 5vw, 5rem);
-  flex-shrink: 0;
-  margin-bottom: 5rem;
+.start_game__button_instructions {
+  border: none;
+  background: none;
 }
-@media only screen and (max-width: 992px) {
-  .instructions__button {
-    width: auto;
-    height: clamp(3rem, 5vw, 5rem);
-  }
+.start_game__button_instructions:focus {
+  border: 3px solid green;
+}
+
+.start_game__arrow {
+  display: block;
+  width: auto;
+  height: clamp(1.2rem, 2vw, 5rem);
+  flex-shrink: 0;
 }

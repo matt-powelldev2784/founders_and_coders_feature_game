@@ -1,12 +1,11 @@
 import { setPropertyValue } from '../helpers/updateProperties.js';
 
-export const addStartScreenEventListeners = () => {
+export const addInstructionsEventListeners = () => {
   document.addEventListener('keydown', displayInstructions);
-
   document.addEventListener('keydown', hideInstructions);
 };
 
-export const removeStartScreenEventListeners = () => {
+export const removeInstructionsEventListeners = () => {
   document.removeEventListener('keydown', displayInstructions);
   document.removeEventListener('keydown', hideInstructions);
 };
