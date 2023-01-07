@@ -44,7 +44,6 @@ const handleChangeCurrentMenuItem = (event) => {
 
     const currentMenuItem = getCurrentMenuItem();
     const currentElement = currentMenuItem.button;
-    console.log('currentMenuItem', currentMenuItem);
 
     const currentElementRigthArrow = currentElement.previousElementSibling;
     const currentElementLeftArrow = currentElement.nextElementSibling;
