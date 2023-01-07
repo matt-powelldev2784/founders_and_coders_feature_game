@@ -28,8 +28,8 @@
 
 .virus {
   position: absolute;
-  width: 8rem;
-  height: 8rem;
+  height: 15vh;
+  width: auto;
   bottom: 25%;
   right: -2000px;
   z-index: 1;
