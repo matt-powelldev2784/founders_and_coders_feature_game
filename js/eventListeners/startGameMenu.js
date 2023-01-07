@@ -3,6 +3,13 @@ import { removeInstructionsEventListeners } from './instructions.js';
 import { updateGameFrame } from '../main.js';
 import { generateGameElements } from '../generateGameElements/generateGameElements.js';
 
+export const loadStartGameEventListeners = () => {
+  const startButton = document.getElementById('start_game__button_start');
+  startButton.addEventListener('click', startGame);
+  document.addEventListener('keydown', handleChangeCurrentMenuItem);
+  document.addEventListener('keydown', handleMenuItemSelected);
+};
+
 export const startGame = () => {
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
@@ -22,13 +29,6 @@ const menuItems = [
   { button: instructionButton, onSelect: displayInstructions },
   { button: startButton, onSelect: startGame },
 ];
-
-export const loadStartGameEventListeners = () => {
-  const startButton = document.getElementById('start_game__button_start');
-  startButton.addEventListener('click', startGame);
-  document.addEventListener('keydown', handleChangeCurrentMenuItem);
-  document.addEventListener('keydown', handleMenuItemSelected);
-};
 
 const getCurrentMenuItem = () => {
   const menuItem = menuItems[0];

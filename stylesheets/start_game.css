@@ -57,20 +57,14 @@
   border: none;
   background: none;
 }
-.start_game__button_start:focus {
-  border: 3px solid green;
-}
 
 .start_game__button_instructions {
   border: none;
   background: none;
 }
-.start_game__button_instructions:focus {
-  border: 3px solid green;
-}
 
 .start_game__arrow {
-  display: block;
+  display: none;
   width: auto;
   height: clamp(1.2rem, 2vw, 5rem);
   flex-shrink: 0;

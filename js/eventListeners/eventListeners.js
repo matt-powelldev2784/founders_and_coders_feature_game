@@ -5,7 +5,7 @@ import {
 } from './pauseGame.js';
 import { addCharacterJumpEventListener } from './charcterJump.js';
 import { displayScore } from './displayScore.js';
-import { loadStartGameEventListeners } from './startGame.js';
+import { loadStartGameEventListeners } from './startGameMenu.js';
 import { addInstructionsEventListeners } from './instructions.js';
 
 export const loadEventListeners = () => {
