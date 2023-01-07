@@ -1,16 +1,46 @@
-.game_over_screen {
-  position: absolute;
-  top: 0;
-  left: 0;
+.game_over__wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 3;
+}
+
+.game_over__screen {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 999;
 }
 
-.game_over_img {
-  width: 50%;
-  height: 50%;
+.game_over__img {
+  width: clamp(20rem, 50vw, 60rem);
+  height: auto;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+.game_over__button_container {
+  display: flex;
+  align-items: center;
+}
+
+.game_over__restart_game_button {
+  display: inline;
+  width: clamp(15rem, 30vw, 30rem);
+  height: auto;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
+
+.restart_game__arrow {
+  display: inline;
+  width: auto;
+  height: clamp(1.2rem, 2vw, 5rem);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
 }

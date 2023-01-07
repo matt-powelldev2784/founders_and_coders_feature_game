@@ -10,10 +10,18 @@ export const loadStartGameEventListeners = () => {
   document.addEventListener('keydown', handleMenuItemSelected);
 };
 
+export const removeStartGameEventListeners = () => {
+  const startButton = document.getElementById('start_game__button_start');
+  startButton.removeEventListener('click', startGame);
+  document.removeEventListener('keydown', handleChangeCurrentMenuItem);
+  document.removeEventListener('keydown', handleMenuItemSelected);
+};
+
 export const startGame = () => {
+  removeInstructionsEventListeners();
+  removeStartGameEventListeners();
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
-  removeInstructionsEventListeners();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
 };

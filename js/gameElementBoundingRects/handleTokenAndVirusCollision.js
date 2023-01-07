@@ -4,6 +4,7 @@ import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
 import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
 import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
+import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
 
 export const handleTokenAndVirusCollision = () => {
   viruses.forEach((virus) => {
@@ -19,6 +20,7 @@ export const handleTokenAndVirusCollision = () => {
       setGameToPause();
       removeResumeGameEventListener();
       displayGameOverScreen();
+      loadRestartGameEventListener();
     }
   });
 };
