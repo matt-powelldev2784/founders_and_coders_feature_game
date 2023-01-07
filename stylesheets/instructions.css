@@ -68,11 +68,16 @@
 }
 
 .instructions__virus {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .instructions__char {
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.instructions__spacebar {
+  height: 3rem;
+  width: auto;
 }
