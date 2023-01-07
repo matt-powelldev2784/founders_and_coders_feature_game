@@ -23,7 +23,7 @@
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: safe center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -40,6 +40,16 @@
   .start_game__title {
     width: clamp(15rem, 75vw, 90%);
   }
+}
+
+.start_game__buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1vh;
+  min-height: 15rem;
 }
 
 .button_container {
@@ -68,4 +78,12 @@
   width: auto;
   height: clamp(1.2rem, 2vw, 5rem);
   flex-shrink: 0;
+}
+
+.start_screen__text {
+  color: white;
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem;
 }
