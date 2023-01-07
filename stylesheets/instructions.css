@@ -9,6 +9,7 @@
   justify-content: safe center;
   align-items: center;
   flex-wrap: nowrap;
+  overflow-y: auto;
   z-index: -1;
 }
 
