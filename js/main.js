@@ -1,6 +1,5 @@
 import { updateGroundPosition } from './ground/updateGroundPosition.js';
 import { setSecondGroundImageLeftValue } from './ground/setSecondGroundImageLeftValue.js';
-import { generateGameElements } from './generateGameElements/generateGameElements.js';
 import { updateGameElementsPosition } from './generateGameElements/updateGameElementsPosition.js';
 import { animateCharacterAtInterval } from './character/animateCharacter.js';
 import { loadEventListeners } from './eventListeners/eventListeners.js';
