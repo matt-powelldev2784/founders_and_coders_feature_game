@@ -26,7 +26,7 @@ export const startGame = () => {
 
   if (isTouchDevice) {
     const mainGameContainer = document.getElementById('main__game_container');
-    mainGameContainer.requestFullscreen() || mainGameContainer.webkitRequestFullScreen();
+    mainGameContainer.webkitRequestFullScreen();
   }
 
   removeInstructionsEventListeners();
