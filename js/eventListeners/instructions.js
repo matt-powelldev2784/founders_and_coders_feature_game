@@ -1,6 +1,8 @@
 import { setPropertyValue } from '../helpers/updateProperties.js';
 
 export const addInstructionsEventListeners = () => {
+  const instructionsButton = document.getElementById('instructions_button');
+  instructionsButton.addEventListener('click', displayInstructions);
   document.addEventListener('keydown', displayInstructions);
   document.addEventListener('keydown', hideInstructions);
 };
@@ -11,7 +13,8 @@ export const removeInstructionsEventListeners = () => {
 };
 
 const displayInstructions = (event) => {
-  if (event.key === 'i') {
+  console.log('event', event);
+  if (event.key === 'i' || event.type === 'click') {
     const instructions = document.getElementById('instructions__container');
     const startScreenMenuInfo = document.getElementById('start_screen__text');
     setPropertyValue(startScreenMenuInfo, 'opacity', '0');
