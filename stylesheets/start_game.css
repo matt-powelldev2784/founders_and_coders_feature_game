@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  border: 3px solid green;
 }
 
 .start_game__screen {
@@ -36,6 +37,7 @@
   height: auto;
   margin-top: 2rem;
   flex-shrink: 0;
+  border: 3px solid green;
 }
 @media only screen and (max-width: 992px) {
   .start_game__title {
