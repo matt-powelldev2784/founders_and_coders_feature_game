@@ -30,6 +30,12 @@
   flex-wrap: nowrap;
   gap: 1vh;
 }
+@media only screen and (max-width: 451px) {
+  .start_game__conatiner {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
 
 .start_game__title {
   width: clamp(50rem, 70vw, 55rem);
@@ -37,9 +43,17 @@
   margin-top: 2rem;
   flex-shrink: 0;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 451px) {
   .start_game__title {
-    width: clamp(15rem, 75vw, 90%);
+    margin-top: 1rem;
+    width: clamp(15rem, 90vw, 90%);
+  }
+}
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  .start_game__title {
+    margin-top: 1rem;
+    height: 45vh;
+    width: auto;
   }
 }
 
@@ -51,6 +65,11 @@
   flex-wrap: nowrap;
   gap: 1vh;
   min-height: 15rem;
+}
+@media only screen and (max-width: 451px) {
+  .start_game__buttons {
+    min-height: 4rem;
+  }
 }
 
 .button_container {
@@ -89,4 +108,9 @@
   font-size: 1rem;
   text-align: center;
   margin: 2rem;
+}
+@media only screen and (max-width: 451px) {
+  .start_screen__text {
+    display: none;
+  }
 }
