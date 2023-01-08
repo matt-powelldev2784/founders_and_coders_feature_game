@@ -24,12 +24,12 @@ export const startGame = () => {
     );
   };
 
-  // if (isTouchDevice) {
-  //   const mainGameContainer = document.getElementById('main__game_container');
-  //   console.log(' mainGameContainer.requestFullScreen()', mainGameContainer.requestFullScreen());
-  //   mainGameContainer.requestFullscreen();
-  //   //mainGameContainer.webkitRequestFullScreen() && mainGameContainer.webkitRequestFullScreen();
-  // }
+  if (isTouchDevice) {
+    const mainGameContainer = document.getElementById('main__game_container');
+
+    //mainGameContainer.requestFullscreen();
+    mainGameContainer.webkitRequestFullScreen({ navigationUI: 'hide' });
+  }
 
   removeInstructionsEventListeners();
   removeStartGameEventListeners();
