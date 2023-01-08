@@ -18,19 +18,6 @@ export const removeStartGameEventListeners = () => {
 };
 
 export const startGame = () => {
-  const isTouchDevice = () => {
-    return (
-      'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
-    );
-  };
-
-  if (isTouchDevice) {
-    const mainGameContainer = document.getElementById('main__game_container');
-
-    //mainGameContainer.requestFullscreen();
-    mainGameContainer.webkitRequestFullScreen({ navigationUI: 'hide' });
-  }
-
   removeInstructionsEventListeners();
   removeStartGameEventListeners();
   const startScreen = document.getElementById('start_game__bg');
