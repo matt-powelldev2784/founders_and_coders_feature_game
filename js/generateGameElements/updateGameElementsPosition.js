@@ -13,7 +13,7 @@ export const updateGameElementsPosition = (delta, gameElements) => {
     const tokenCurrentLeftPosition = getPropertyValue(element, 'left');
     const tokenNewLeftPosition = `${tokenCurrentLeftPosition - delta * SPEED}px`;
     setPropertyValue(element, 'left', tokenNewLeftPosition);
-    const tokenHasLeftScreenValue = -100;
+    const tokenHasLeftScreenValue = -50;
     const tokenLeftPositionAsNumber = tokenNewLeftPosition.slice(0, -2);
 
     if (tokenLeftPositionAsNumber < tokenHasLeftScreenValue) {
