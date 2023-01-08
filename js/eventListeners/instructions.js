@@ -15,7 +15,7 @@ export const removeInstructionsEventListeners = () => {
 const displayInstructions = (event) => {
   console.log('event', event);
   if (event.key === 'i' || event.type === 'click') {
-``    const instructions = document.getElementById('instructions__container');
+    const instructions = document.getElementById('instructions__container');
     const startScreenMenuInfo = document.getElementById('start_screen__text');
     setPropertyValue(startScreenMenuInfo, 'opacity', '0');
     setPropertyValue(instructions, 'z-index', '1');
