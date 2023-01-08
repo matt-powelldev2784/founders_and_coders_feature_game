@@ -1,3 +1,5 @@
+import { gameIsPaused } from '../eventListeners/pauseGame.js';
+
 const animateCharacter = () => {
   const character = document.getElementById('main__char');
   const currentCharacter = character.getAttribute('src').slice(6, -4);
@@ -11,6 +13,6 @@ const animateCharacter = () => {
 
 export const animateCharacterAtInterval = () => {
   setInterval(() => {
-    animateCharacter();
+    if (!gameIsPaused) animateCharacter();
   }, 300);
 };
