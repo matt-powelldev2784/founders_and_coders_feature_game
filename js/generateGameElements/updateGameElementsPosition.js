@@ -1,4 +1,3 @@
-import { tokens } from './token/generateToken.js';
 import { getPropertyValue, setPropertyValue } from '../helpers/updateProperties.js';
 import { SPEED } from '../globalVariables.js';
 
