@@ -10,6 +10,11 @@ export const generateGameElements = () => {
     if (gameIsPaused === false) {
       const tokenType = getRandomToken();
       generateToken(tokenType);
+    }
+  }, Math.random() * SPEED + 4000);
+
+  setInterval(() => {
+    if (gameIsPaused === false) {
       generateVirus(virus);
     }
   }, Math.random() * SPEED + 5000);

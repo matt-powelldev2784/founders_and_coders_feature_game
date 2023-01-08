@@ -26,11 +26,11 @@
   overflow: hidden;
 }
 
-.virus {
+/* .virus {
   position: absolute;
-  height: 15vh;
+  height: 10vh;
   width: auto;
   bottom: 25%;
   right: -2000px;
   z-index: 1;
-}
+} */

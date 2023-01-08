@@ -1,4 +1,3 @@
-//Every double of speed = gravity divided by 4
 export const SPEED = 0.5;
 
 export let DELTA;

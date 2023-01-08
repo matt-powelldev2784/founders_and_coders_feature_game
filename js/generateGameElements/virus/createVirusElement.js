@@ -6,7 +6,11 @@ export const createVirusElement = (virusType, uniqueKey) => {
   const bg_container = document.getElementById('bg_container');
   const virusNumberString = `virus${uniqueKey}`;
   const virusStringforCssClass = `.virus${uniqueKey}`;
-  const virusElement = createElement('img', { src: img, class: 'virus', id: virusNumberString });
+  const virusElement = createElement('img', {
+    src: img,
+    class: virusNumberString,
+    id: virusNumberString,
+  });
 
   bg_container.append(virusElement);
 
