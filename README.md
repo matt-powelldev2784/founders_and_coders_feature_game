@@ -13,9 +13,10 @@ google dinosaur game and this YouTube tutorial: https://www.youtube.com/watch?v=
 
 I made sure I watched the tutorial from start to finish before doing any coding myself.
 
-I then set about getting the scrolling background working as this was the key to the whole project.
-I had never heard of the requestAnimationFrame JavaScript syntax, so for this part of the project I
-was heavily reliant on the tutorial video.
+I then set about getting the scrolling background working as this was the key part of the whole
+project. I had never heard of the requestAnimationFrame JavaScript syntax, so for this part of the
+project I was heavily reliant on the tutorial video. I now understand that I can use
+requestAnimationFrame callback function to update the dom before the next repaint.
 
 Once the scrolling background was working, I was able to apply similar logic to the other moving
 parts. I then coded one feature at a time only referring to the video occasionally if I needed
