@@ -24,10 +24,12 @@ export const startGame = () => {
     );
   };
 
-  if (isTouchDevice) {
-    const mainGameContainer = document.getElementById('main__game_container');
-    mainGameContainer.webkitRequestFullScreen();
-  }
+  // if (isTouchDevice) {
+  //   const mainGameContainer = document.getElementById('main__game_container');
+  //   console.log(' mainGameContainer.requestFullScreen()', mainGameContainer.requestFullScreen());
+  //   mainGameContainer.requestFullscreen();
+  //   //mainGameContainer.webkitRequestFullScreen() && mainGameContainer.webkitRequestFullScreen();
+  // }
 
   removeInstructionsEventListeners();
   removeStartGameEventListeners();
@@ -39,6 +41,8 @@ export const startGame = () => {
 
 const displayInstructions = () => {
   const instructions = document.getElementById('instructions__container');
+  console.log('instructions', instructions);
+  ``;
   const startScreenMenuInfo = document.getElementById('start_screen__text');
   setPropertyValue(startScreenMenuInfo, 'opacity', '0');
   setPropertyValue(instructions, 'z-index', '1');
