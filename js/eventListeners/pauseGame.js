@@ -1,6 +1,3 @@
-import { updateGameFrame } from '../main.js';
-import { addCharacterJumpEventListener } from './charcterJump.js';
-
 export let gameIsPaused = false;
 
 export const addPauseGameEventListener = () => {
