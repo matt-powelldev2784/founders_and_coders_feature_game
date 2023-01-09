@@ -61,3 +61,17 @@
   background: black;
   padding: 0rem 0.5rem 0rem 0.5rem;
 }
+
+.main__paused {
+  position: absolute;
+  height: 50%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Berkelium Bitmap', sans-serif;
+  font-size: 2vw;
+  text-align: center;
+  padding: 25% 2rem;
+}
