@@ -8,6 +8,7 @@ export const displayGameOverScreen = () => {
 
   const restartGameButton = createElement('img', {
     class: 'game_over__restart_game_button',
+    id: 'game_over__restart_game_button',
     src: './img/restart_button.svg',
   });
   const arrowLeft = createElement('img', {

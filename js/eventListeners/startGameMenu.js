@@ -23,7 +23,6 @@ export const startGame = () => {
   removeStartGameEventListeners();
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
-  goToFullScreen();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
 };
