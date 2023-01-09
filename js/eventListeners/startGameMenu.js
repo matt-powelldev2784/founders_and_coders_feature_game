@@ -7,6 +7,8 @@ import {
   addResumeGameEventListener,
   setGameToPause,
 } from './pauseGame.js';
+import { isTouchDevice } from '../helpers/isTouchDevice.js';
+import { goToFullScreen } from '../helpers/gotToFullScreen.js';
 
 export const loadStartGameEventListeners = () => {
   const startButton = document.getElementById('start_game__button_start');
@@ -27,6 +29,9 @@ export const startGame = () => {
   removeStartGameEventListeners();
   addPauseGameEventListener();
   addResumeGameEventListener();
+  if (isTouchDevice()) {
+    goToFullScreen();
+  }
   window.addEventListener('resize', setGameToPause);
   const startScreen = document.getElementById('start_game__screen');
   startScreen.remove();

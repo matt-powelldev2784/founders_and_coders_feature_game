@@ -1,12 +1,12 @@
 export const goToFullScreen = (element, options) => {
   element = element || document.body;
   if (element.requestFullscreen) {
-    element.requestFullscreen(options);
+    element.requestFullscreen();
   } else if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen(options);
+    element.mozRequestFullScreen();
   } else if (element.msRequestFullscreen) {
-    element.msRequestFullscreen(options);
+    element.msRequestFullscreen();
   } else if (element.webkitRequestFullscreen) {
-    element.webkitRequestFullScreen(options);
+    element.webkitRequestFullScreen();
   }
 };
