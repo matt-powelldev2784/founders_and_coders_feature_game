@@ -25,12 +25,17 @@ inspiration for my own implementation.
 # Debugging
 
 I was able to debug each feature as I built the game using the console and element inspector as I
-usually would. The biggest issue I came across was getting all the game elements to retain their
-positions after implementing a pause/resume feature. After a few failures I realised I could get the
-required outcome by, leaving the requestAnimationFrame logic running at all times and only running
-the logic to move the pieces when the game was not paused.
+usually would. I had a bit of trouble getting all the game elements to retain their positions after
+implementing a pause/resume feature. After a few failures I realised I could get the required
+outcome by, leaving the requestAnimationFrame logic running at all times and only running the logic
+to move the pieces when the game was not paused.
 
 # Issues
 
-When doing some cross browser testing, I had some trouble with the animation speed running slower on
-safari. This is something I haven't been able to resolve.
+When doing some cross browser testing, I noticed the animation wasn't as smooth in safari. I noticed
+the callback function from requestAnimationFrame in safari is taking twice as much time when
+compared to firefox and chrome. To offset some of the issues with this, the application defines some
+variables specifically for iOS browsers.
+
+I also noticed some animation glitches when testing on my iphone. Sometimes the animation would run
+super fast, but if you reloaded the page and started the game again it would be back to normal.
