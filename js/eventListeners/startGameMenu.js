@@ -28,7 +28,7 @@ export const startGame = () => {
   addPauseGameEventListener();
   addResumeGameEventListener();
   window.addEventListener('resize', setGameToPause);
-  const startScreen = document.getElementById('start_game__bg');
+  const startScreen = document.getElementById('start_game__screen');
   startScreen.remove();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
