@@ -2,6 +2,7 @@ import { setPropertyValue } from '../helpers/updateProperties.js';
 import { removeInstructionsEventListeners } from './instructions.js';
 import { updateGameFrame } from '../main.js';
 import { generateGameElements } from '../generateGameElements/generateGameElements.js';
+import { goToFullScreen } from '../helpers/gotToFullScreen.js';
 
 export const loadStartGameEventListeners = () => {
   const startButton = document.getElementById('start_game__button_start');
@@ -22,6 +23,7 @@ export const startGame = () => {
   removeStartGameEventListeners();
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
+  goToFullScreen();
   window.requestAnimationFrame(updateGameFrame);
   generateGameElements();
 };
