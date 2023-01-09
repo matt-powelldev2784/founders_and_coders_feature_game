@@ -39,7 +39,8 @@
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .start_game__conatiner {
-    justify-content: center;
+    margin-top: 2rem;
+    justify-content: flex-start;
     gap: 0.5rem;
   }
 }
