@@ -3,7 +3,7 @@ export const setWindowHeightSpeedVar = () => {
   windowHeightSpeedVar = innerHeight / 600;
 };
 
-export const SPEED = 0.3 * windowHeightSpeedVar;
+export const SPEED = 0.6 * windowHeightSpeedVar;
 
 export let DELTA;
 export const setGlobalDelta = (delta) => {
