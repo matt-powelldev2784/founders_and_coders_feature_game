@@ -5,9 +5,9 @@
 # Planning
 
 I did a bit of research online, before deciding what type of game to make. I came across a few
-tutorials for endless scrolling background games. I thought this type of game would look cool and be
-relatively easy to code due to the small number of components used. The game is loosely based on the
-google dinosaur game and this YouTube tutorial: https://www.youtube.com/watch?v=47eXVRJKdkU&t=1280s
+tutorials for endless scrolling background games. I thought this type of game would look cool and
+push the bounderies of my current skillset. The game is loosely based on the google dinosaur game
+and this YouTube tutorial: https://www.youtube.com/watch?v=47eXVRJKdkU&t=1280s
 
 # Building
 
@@ -30,7 +30,7 @@ positions after implementing a pause/resume feature. After a few failures I real
 required outcome by, leaving the requestAnimationFrame logic running at all times and only running
 the logic to move the pieces when the game was not paused.
 
-When doing some cross browser testing, I noticed the game animation runs about 50% slower on Safari
-than Chrome and Firefox. I have read a few threads online regarding requestAnimationFrame and
-safari. Some suggest this is the planned behaviour of Safari, I currently don’t have a solution for
-this.
+# Issues
+
+When doing some cross browser testing, I had some trouble with the animation speed running slower on
+safari. This is something I haven't been able to resolve.
