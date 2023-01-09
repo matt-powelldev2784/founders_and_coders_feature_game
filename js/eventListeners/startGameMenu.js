@@ -2,6 +2,7 @@ import { setPropertyValue } from '../helpers/updateProperties.js';
 import { removeInstructionsEventListeners } from './instructions.js';
 import { updateGameFrame } from '../main.js';
 import { generateGameElements } from '../generateGameElements/generateGameElements.js';
+import { addPauseGameEventListener, addResumeGameEventListener } from './pauseGame.js';
 
 export const loadStartGameEventListeners = () => {
   const startButton = document.getElementById('start_game__button_start');
@@ -20,6 +21,8 @@ export const removeStartGameEventListeners = () => {
 export const startGame = () => {
   removeInstructionsEventListeners();
   removeStartGameEventListeners();
+  addPauseGameEventListener();
+  addResumeGameEventListener();
   const startScreen = document.getElementById('start_game__bg');
   startScreen.remove();
   window.requestAnimationFrame(updateGameFrame);

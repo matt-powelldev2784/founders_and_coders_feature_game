@@ -11,10 +11,7 @@ export const loadEventListeners = () => {
   addInstructionsEventListeners();
   window.addEventListener('resize', setSecondGroundImageLeftValue);
   window.addEventListener('resize', setWindowHeightSpeedVar);
-  window.addEventListener('resize', setGameToPause);
   window.addEventListener('load', displayScore);
   loadStartGameEventListeners();
-  addPauseGameEventListener();
-  addResumeGameEventListener();
   addCharacterJumpEventListener();
 };
