@@ -1,6 +1,6 @@
-let windowHeightSpeedVar = innerHeight / 800;
+let windowHeightSpeedVar = innerHeight / 600;
 export const setWindowHeightSpeedVar = () => {
-  windowHeightSpeedVar = innerHeight / 800;
+  windowHeightSpeedVar = innerHeight / 600;
 };
 
 export const SPEED = 0.6 * windowHeightSpeedVar;
