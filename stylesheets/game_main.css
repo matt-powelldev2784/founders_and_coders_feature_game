@@ -42,7 +42,7 @@
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .main__score_container {
-    margin-top: 6vh;
+    margin-top: 12vh;
     margin-right: 2vh;
   }
 }

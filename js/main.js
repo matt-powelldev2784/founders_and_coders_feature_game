@@ -23,6 +23,7 @@ export const updateGameFrame = (time) => {
 
   const delta = time - lastTime;
   setGlobalDelta(delta);
+  console.log('delta', delta);
 
   if (gameIsPaused === false) {
     updateGroundPosition(delta);
