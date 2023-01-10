@@ -1,3 +1,5 @@
+import { generateRandomNumber } from '../../helpers/generateRandomNumber.js';
+
 export const tokenTypes = [
   {
     key: 0,
@@ -31,11 +33,8 @@ export const tokenTypes = [
   },
 ];
 
-const getRandomWholeNumber = (min, max) => {
-  return Math.round(Math.random() * (max - min) + min);
-};
 const tokenTypesArrayLength = tokenTypes.length - 1;
 export const getRandomToken = () => {
-  const randomTokenNumber = getRandomWholeNumber(0, tokenTypesArrayLength);
+  const randomTokenNumber = generateRandomNumber(0, tokenTypesArrayLength);
   return tokenTypes[randomTokenNumber];
 };

@@ -2,37 +2,32 @@ import { SPEED } from '../globalVariables.js';
 import { gameIsPaused } from '../eventListeners/pauseGame.js';
 import { getRandomToken } from './token/tokenTypes.js';
 import { generateToken } from './token/generateToken.js';
+import { getVirus } from './virus/virus.js';
 import { generateVirus } from './virus/generateVirus.js';
-import { virus } from './virus/virus.js';
+
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
 
-let virusReleaseSpeed = 5000;
+let gameElementReleaseSpeed = 5000;
 
-//release virus at decreasing intervals
-const releaseVirus = () => {
-  const virusReleaseInterval = generateRandomNumber(1, 500) + virusReleaseSpeed;
+//release game elements at decreasing intervals
+const releaseGameElement = (generateGameElementFn, gameElement) => {
+  const releaseInterval = generateRandomNumber(1000, 2000) + gameElementReleaseSpeed;
 
-  const virusReleaseSetInterval = setInterval(() => {
-    generateVirus(virus);
+  const releaseSetInterval = setInterval(() => {
+    generateGameElementFn(gameElement());
 
-    if (virusReleaseSpeed > 1001) {
-      virusReleaseSpeed = virusReleaseSpeed - 500;
-      clearInterval(virusReleaseSetInterval);
-      releaseVirus();
+    if (gameElementReleaseSpeed > 499) {
+      gameElementReleaseSpeed = gameElementReleaseSpeed - 500;
+      clearInterval(releaseSetInterval);
+      releaseGameElement(generateGameElementFn, gameElement);
     } else {
-      clearInterval(virusReleaseSetInterval);
-      releaseVirus();
+      clearInterval(releaseSetInterval);
+      releaseGameElement(generateGameElementFn, gameElement);
     }
-  }, virusReleaseInterval);
+  }, releaseInterval);
 };
 
 export const generateGameElements = () => {
-  setInterval(() => {
-    if (gameIsPaused === false) {
-      const tokenType = getRandomToken();
-      generateToken(tokenType);
-    }
-  }, Math.random() * SPEED + 4000);
-
-  releaseVirus();
+  releaseGameElement(generateToken, getRandomToken);
+  releaseGameElement(generateVirus, getVirus);
 };
