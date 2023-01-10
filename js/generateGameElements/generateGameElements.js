@@ -4,6 +4,27 @@ import { getRandomToken } from './token/tokenTypes.js';
 import { generateToken } from './token/generateToken.js';
 import { generateVirus } from './virus/generateVirus.js';
 import { virus } from './virus/virus.js';
+import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
+
+let virusReleaseSpeed = 5000;
+
+//release virus at decreasing intervals
+const releaseVirus = () => {
+  const virusReleaseInterval = generateRandomNumber(1, 500) + virusReleaseSpeed;
+
+  const virusReleaseSetInterval = setInterval(() => {
+    generateVirus(virus);
+
+    if (virusReleaseSpeed > 1001) {
+      virusReleaseSpeed = virusReleaseSpeed - 500;
+      clearInterval(virusReleaseSetInterval);
+      releaseVirus();
+    } else {
+      clearInterval(virusReleaseSetInterval);
+      releaseVirus();
+    }
+  }, virusReleaseInterval);
+};
 
 export const generateGameElements = () => {
   setInterval(() => {
@@ -13,9 +34,5 @@ export const generateGameElements = () => {
     }
   }, Math.random() * SPEED + 4000);
 
-  setInterval(() => {
-    if (gameIsPaused === false) {
-      generateVirus(virus);
-    }
-  }, Math.random() * SPEED + 5000);
+  releaseVirus();
 };
