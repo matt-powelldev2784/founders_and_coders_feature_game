@@ -23,6 +23,8 @@ export const removeStartGameEventListeners = () => {
 };
 
 export const startGame = () => {
+  const mainGameContainer = document.getElementById('bg_container');
+  setPropertyValue(mainGameContainer, 'visibility', 'visible');
   removeInstructionsEventListeners();
   removeStartGameEventListeners();
   addPauseGameEventListener();

@@ -42,7 +42,7 @@ export const setGameToResume = () => {
 const addGameIsPausedText = () => {
   const bgContainer = document.getElementById('bg_container');
 
-  if (!isTouchDevice()) {
+  if (!isTouchDevice() && !gameIsPaused) {
     const pausedText = createElement(
       'p',
       { class: 'main__paused', id: 'main__paused' },
@@ -52,7 +52,7 @@ const addGameIsPausedText = () => {
     bgContainer.append(pausedText);
   }
 
-  if (isTouchDevice()) {
+  if (isTouchDevice() && !gameIsPaused) {
     const pausedText = createElement(
       'p',
       { class: 'main__paused', id: 'main__paused' },

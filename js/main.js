@@ -11,6 +11,7 @@ import { viruses } from './generateGameElements/virus/generateVirus.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
+import { setPropertyValue } from './helpers/updateProperties.js';
 
 let lastTime;
 export const updateGameFrame = (time) => {
@@ -41,3 +42,6 @@ export const updateGameFrame = (time) => {
 setSecondGroundImageLeftValue();
 loadEventListeners();
 animateCharacterAtInterval();
+
+const mainGameContainer = document.getElementById('bg_container');
+setPropertyValue(mainGameContainer, 'visibility', 'hidden');
