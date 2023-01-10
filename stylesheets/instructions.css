@@ -41,7 +41,7 @@
 }
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .instructions {
-    margin-top: 3rem;
+    margin-top: 2rem;
     height: 70vh;
   }
 }
@@ -60,6 +60,11 @@
   font-family: 'Berkelium Bitmap', sans-serif;
   font-size: 1.5rem;
   text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  .instructions__text {
+    font-size: 1rem;
+  }
 }
 
 .instructions__tokens_container {
