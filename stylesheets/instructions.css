@@ -33,7 +33,7 @@
   .instructions {
     position: absolute;
     width: clamp(90%, 70vw, 90%);
-    height: 80vh;
+    height: 75vh;
     flex-direction: row;
     overflow-y: auto;
   }
@@ -41,7 +41,7 @@
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .instructions {
     margin-top: 3rem;
-    height: 75vh;
+    height: 70vh;
   }
 }
 
