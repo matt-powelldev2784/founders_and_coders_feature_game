@@ -5,6 +5,11 @@
   overflow-y: auto;
   z-index: 3;
 }
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  .game_over__wrapper {
+    margin-top: -8vh;
+  }
+}
 
 .game_over__screen {
   display: flex;
