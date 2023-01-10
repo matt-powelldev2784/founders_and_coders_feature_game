@@ -40,6 +40,11 @@
   flex-direction: column;
   z-index: 1;
 }
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  .main__score_container {
+    margin-top: 8vh;
+  }
+}
 
 .main__score_title {
   position: relative;
