@@ -9,7 +9,7 @@
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .main__game_container {
-    margin: 8vh 0;
+    margin: -8vh 0;
   }
 }
 
