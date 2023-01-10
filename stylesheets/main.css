@@ -32,7 +32,7 @@ body {
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   body {
-    margin-top: -10vh;
+    margin-top: -12vh;
     background: linear-gradient(0deg, #2381e3 49%, #754b21 50%);
   }
 }
