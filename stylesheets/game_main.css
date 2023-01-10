@@ -42,8 +42,8 @@
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .main__score_container {
-    margin-top: 10vh;
-    margin-right: 5vh;
+    margin-top: 6vh;
+    margin-right: 2vh;
   }
 }
 
