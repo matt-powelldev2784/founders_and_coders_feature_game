@@ -7,6 +7,11 @@
   height: 100vh;
   background: linear-gradient(0deg, #754b21 49%, #2381e3 50%);
 }
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  .main__game_container {
+    margin: 8vh 0;
+  }
+}
 
 .bg_container {
   position: relative;
@@ -39,11 +44,6 @@
   justify-content: center;
   flex-direction: column;
   z-index: 1;
-}
-@media screen and (max-device-width: 992px) and (orientation: landscape) {
-  .main__score_container {
-    margin-top: 8vh;
-  }
 }
 
 .main__score_title {
