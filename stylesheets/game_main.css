@@ -5,7 +5,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(117, 75, 33, 1) 49%, rgba(36, 131, 225, 1) 50%);
+  background: linear-gradient(0deg, #754b21 49%, #2381e3 50%);
 }
 
 .bg_container {

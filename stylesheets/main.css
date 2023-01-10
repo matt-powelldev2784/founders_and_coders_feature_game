@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: black;
+  background: black;
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   body {
