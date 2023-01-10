@@ -7,7 +7,6 @@ export const characterJump = () => {
   document.removeEventListener('keydown', jumnpOnKeyDown);
   const character = document.getElementById('main__char');
   const browserType = getBroswerType().type;
-  console.log('browserType', browserType);
 
   let jumpTime;
   if (browserType.includes('mozilla')) {
