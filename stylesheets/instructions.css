@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 3rem;
   width: clamp(60rem, 90vw, 90rem);
   height: auto;
@@ -31,7 +31,17 @@
 }
 @media only screen and (max-width: 992px) {
   .instructions {
+    position: absolute;
     width: clamp(90%, 70vw, 90%);
+    height: 80vh;
+    flex-direction: row;
+    overflow-y: auto;
+  }
+}
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  .instructions {
+    margin-top: 3rem;
+    height: 75vh;
   }
 }
 
@@ -54,7 +64,7 @@
 .instructions__tokens_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
