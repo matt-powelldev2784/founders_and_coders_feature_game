@@ -1,10 +1,7 @@
-import { SPEED } from '../globalVariables.js';
-import { gameIsPaused } from '../eventListeners/pauseGame.js';
 import { getRandomToken } from './token/tokenTypes.js';
 import { generateToken } from './token/generateToken.js';
 import { getVirus } from './virus/virus.js';
 import { generateVirus } from './virus/generateVirus.js';
-
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
 
 let gameElementReleaseSpeed = 5000;
