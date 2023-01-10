@@ -59,7 +59,7 @@
 }
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .start_game__title {
-    margin-top: 0rem;
+    margin-top: 2rem;
     height: 40vh;
     width: auto;
   }
