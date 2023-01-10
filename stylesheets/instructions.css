@@ -38,7 +38,7 @@
     overflow-y: auto;
   }
 }
-@media screen and (max-device-width: 992px) and (orientation: landscape) {
+@media screen and (max-width: 992px) and (orientation: landscape) {
   .instructions {
     margin-top: 3rem;
     height: 75vh;
