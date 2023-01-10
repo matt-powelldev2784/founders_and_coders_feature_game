@@ -32,6 +32,7 @@
 @media screen and (max-device-width: 992px) and (orientation: landscape) {
   .main__tree_bg1 {
     height: 80%;
+    border: 3px solid green;
   }
 }
 
