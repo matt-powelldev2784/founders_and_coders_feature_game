@@ -6,13 +6,6 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(0deg, rgba(117, 75, 33, 1) 49%, rgba(36, 131, 225, 1) 50%);
-
-  border: 3px solid green;
-}
-@media screen and (max-device-width: 992px) and (orientation: landscape) {
-  .main__game_container {
-    background: linear-gradient(0deg, rgba(117, 75, 33, 1) 49%, rgba(36, 131, 225, 1) 50%);
-  }
 }
 
 .bg_container {
@@ -29,12 +22,6 @@
   transform: translateY(-50%);
   height: 100%;
 }
-@media screen and (max-device-width: 992px) and (orientation: landscape) {
-  .main__tree_bg1 {
-    height: 80%;
-    border: 3px solid green;
-  }
-}
 
 .main__tree_bg2 {
   position: absolute;
@@ -42,11 +29,6 @@
   left: 0px;
   transform: translateY(-50%);
   height: 100%;
-}
-@media screen and (max-device-width: 992px) and (orientation: landscape) {
-  .main__tree_bg2 {
-    height: 80%;
-  }
 }
 
 .main__score_container {

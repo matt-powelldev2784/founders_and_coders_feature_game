@@ -30,3 +30,8 @@ body {
   min-height: 100vh;
   background-color: #679bf1;
 }
+@media screen and (max-device-width: 992px) and (orientation: landscape) {
+  body {
+    margin-top: -2rem;
+  }
+}
