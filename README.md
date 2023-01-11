@@ -33,9 +33,14 @@ to move the pieces when the game was not paused.
 # Issues
 
 When doing some cross browser testing, I noticed the animation wasn't as smooth in safari. I noticed
-the callback function from requestAnimationFrame in safari is taking twice as much time when
-compared to firefox and chrome. To offset some of the issues with this, the application defines some
-variables specifically for iOS browsers.
+the callback function from requestAnimationFrame in Safari is taking twice as much time when
+compared to Firefox and Chrome. To offset some of the issues with this, the application defines some
+variables specifically for Safari browsers.
 
-I also noticed some animation glitches when testing on my iphone. Sometimes the animation would run
-super fast, but if you reloaded the page and started the game again it would be back to normal.
+I'm also occasionally seeing an issue where the animation runs very quickly on first run, but after
+a page reload it works fine! I haven't managed find out where the issue is coming from.
+
+I had some issues getting the application to centre on an iPhone in landscape mode. I’ve struggled
+to work out the correct way to deal with the iPhone navigation bar! I’ve resorted to putting a
+margin-top on body element to get a decent result for the user. I’m unable to test on Android as I
+don’t have the hardware.
