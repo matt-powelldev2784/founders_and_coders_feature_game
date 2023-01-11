@@ -9,13 +9,13 @@ export const updateGameElementsPosition = (delta, gameElements) => {
       return;
     }
 
-    const tokenCurrentLeftPosition = getPropertyValue(element, 'left');
-    const tokenNewLeftPosition = `${tokenCurrentLeftPosition - delta * SPEED}px`;
-    setPropertyValue(element, 'left', tokenNewLeftPosition);
-    const tokenHasLeftScreenValue = -50;
-    const tokenLeftPositionAsNumber = tokenNewLeftPosition.slice(0, -2);
+    const elementCurrentLeftPosition = getPropertyValue(element, 'left');
+    const elementNewLeftPosition = `${elementCurrentLeftPosition - delta * SPEED}px`;
+    setPropertyValue(element, 'left', elementNewLeftPosition);
+    const elementHasLeftScreenValue = -50;
+    const elementLeftPositionAsNumber = elementNewLeftPosition.slice(0, -2);
 
-    if (tokenLeftPositionAsNumber < tokenHasLeftScreenValue) {
+    if (elementLeftPositionAsNumber < elementHasLeftScreenValue) {
       gameElement.endOfLife = true;
       element.remove();
     }
