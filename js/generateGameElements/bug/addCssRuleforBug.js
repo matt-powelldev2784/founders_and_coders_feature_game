@@ -1,13 +1,10 @@
 import { addCSSRule } from '../../helpers/addCssRule.js';
+import { generateRandomNumber } from '../../helpers/generateRandomNumber.js';
 
-let bugHeight = 6;
 export const addCssRuleForBug = (className) => {
+  const bugHeight = generateRandomNumber(4, 12);
   const bottom = 25;
-  bugHeight += 1.5;
-  if (bugHeight > 25) bugHeight = 25;
-
   const bugHeightCssString = bugHeight + 'vh';
-
   const gameElementsStylesheet = document.styleSheets[2];
 
   addCSSRule(
