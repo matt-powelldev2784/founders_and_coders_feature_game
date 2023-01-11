@@ -15,7 +15,7 @@ export const addCssRuleForBug = (className) => {
      width: auto;
      align-items: center;
      bottom: ${bottom}%;
-     left: 2000px;
+     left: 1500px;
      z-index: 1; 
      `
   );

@@ -4,11 +4,11 @@ import { getBug } from './bug/bug.js';
 import { generateBug } from './bug/generateBug.js';
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
 
-let gameElementReleaseSpeed = 3000;
+let gameElementReleaseSpeed = 4000;
 
 //release game elements at decreasing intervals
 const releaseGameElement = (generateGameElementFn, gameElement) => {
-  const releaseInterval = generateRandomNumber(1000, 2000) + gameElementReleaseSpeed;
+  const releaseInterval = generateRandomNumber(400, 1500) + gameElementReleaseSpeed;
 
   const releaseSetInterval = setInterval(() => {
     generateGameElementFn(gameElement());
