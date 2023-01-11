@@ -4,7 +4,7 @@ import { getBug } from './bug/bug.js';
 import { generateBug } from './bug/generateBug.js';
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
 
-let gameElementReleaseSpeed = 5000;
+let gameElementReleaseSpeed = 3000;
 
 //release game elements at decreasing intervals
 const releaseGameElement = (generateGameElementFn, gameElement) => {
