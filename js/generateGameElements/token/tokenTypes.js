@@ -3,7 +3,7 @@ import { generateRandomNumber } from '../../helpers/generateRandomNumber.js';
 export const tokenTypes = [
   {
     key: 0,
-    img: './img/tokens/html_icon_8bit.png',
+    img: './img/tokens/html_icon_8bit.svg',
     text: 'HTML',
     points: 100,
   },
@@ -21,7 +21,7 @@ export const tokenTypes = [
   },
   {
     key: 3,
-    img: './img/tokens/react_logo_8bit.png',
+    img: './img/tokens/react_logo_8bit.svg',
     text: 'REACT',
     points: 500,
   },
