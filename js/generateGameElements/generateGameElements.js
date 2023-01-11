@@ -8,7 +8,7 @@ let gameElementReleaseSpeed = 4000;
 
 //release game elements at decreasing intervals
 const releaseGameElement = (generateGameElementFn, gameElement) => {
-  const releaseInterval = generateRandomNumber(400, 1500) + gameElementReleaseSpeed;
+  const releaseInterval = generateRandomNumber(600, 1600) + gameElementReleaseSpeed;
 
   const releaseSetInterval = setInterval(() => {
     generateGameElementFn(gameElement());
