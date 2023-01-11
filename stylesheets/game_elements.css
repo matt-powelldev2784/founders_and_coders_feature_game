@@ -15,8 +15,13 @@
 .token_img {
   display: block;
   margin: 0 auto;
-  width: 8vh;
+  width: 10vh;
   padding: 0.1rem;
+}
+@media only screen and (max-width: 992px) {
+  .token_img {
+    width: 12vh;
+  }
 }
 
 .token__text {
