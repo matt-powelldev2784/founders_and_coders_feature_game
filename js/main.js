@@ -7,7 +7,7 @@ import { gameIsPaused } from './eventListeners/pauseGame.js';
 import { setGlobalDelta } from './globalVariables.js';
 import { getGameElementBoundingRects } from './gameElementBoundingRects/getGameElementBoundingRects.js';
 import { tokens } from './generateGameElements/token/generateToken.js';
-import { viruses } from './generateGameElements/virus/generateVirus.js';
+import { bugs } from './generateGameElements/bug/generateBug.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
 import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
@@ -27,10 +27,10 @@ export const updateGameFrame = (time) => {
   if (gameIsPaused === false) {
     updateGroundPosition(delta);
     updateGameElementsPosition(delta, tokens);
-    updateGameElementsPosition(delta, viruses);
+    updateGameElementsPosition(delta, bugs);
     getGameElementBoundingRects(tokens);
     getGameElementBoundingRects(character);
-    getGameElementBoundingRects(viruses);
+    getGameElementBoundingRects(bugs);
     handleTokenAndCharacterCollision();
     handleTokenAndVirusCollision();
   }

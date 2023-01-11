@@ -1,7 +1,7 @@
 import { getRandomToken } from './token/tokenTypes.js';
 import { generateToken } from './token/generateToken.js';
-import { getVirus } from './virus/virus.js';
-import { generateVirus } from './virus/generateVirus.js';
+import { getBug } from './bug/bug.js';
+import { generateBug } from './bug/generateBug.js';
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
 
 let gameElementReleaseSpeed = 5000;
@@ -26,5 +26,5 @@ const releaseGameElement = (generateGameElementFn, gameElement) => {
 
 export const generateGameElements = () => {
   releaseGameElement(generateToken, getRandomToken);
-  releaseGameElement(generateVirus, getVirus);
+  releaseGameElement(generateBug, getBug);
 };

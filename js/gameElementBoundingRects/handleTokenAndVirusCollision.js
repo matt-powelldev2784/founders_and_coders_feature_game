@@ -1,4 +1,4 @@
-import { viruses } from '../generateGameElements/virus/generateVirus.js';
+import { bugs } from '../generateGameElements/bug/generateBug.js';
 import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
@@ -7,16 +7,16 @@ import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
 
 export const handleTokenAndVirusCollision = () => {
-  viruses.forEach((virus) => {
-    const { endOfLife } = virus;
+  bugs.forEach((bug) => {
+    const { endOfLife } = bug;
     if (endOfLife) return;
 
-    const virusBoundingRect = virus.boundingRect;
+    const bugBoundingRect = bug.boundingRect;
     const characterBoundingRect = character[0].boundingRect;
 
-    const collision = detectBoundingRectCollision(characterBoundingRect, virusBoundingRect);
+    const collision = detectBoundingRectCollision(characterBoundingRect, bugBoundingRect);
     if (collision) {
-      virus.endOfLife = true;
+      bug.endOfLife = true;
       setGameToPause();
       removeResumeGameEventListener();
       displayGameOverScreen();
