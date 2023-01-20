@@ -5,9 +5,11 @@ import { setGameToPause } from '../eventListeners/pauseGame.js';
 import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
 import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
+import { postScore } from '../highScores/postScore.js';
+import { getHighScores } from '../highScores/getHighScores.js';
 
-export const handleTokenAndVirusCollision = () => {
-  bugs.forEach((bug) => {
+export const handleTokenAndVirusCollision = async () => {
+  bugs.forEach(async (bug) => {
     const { endOfLife } = bug;
     if (endOfLife) return;
 
@@ -21,6 +23,8 @@ export const handleTokenAndVirusCollision = () => {
       removeResumeGameEventListener();
       displayGameOverScreen();
       loadRestartGameEventListener();
+      const postedScore = await postScore();
+      const highScores = await getHighScores();
     }
   });
 };
