@@ -33,15 +33,8 @@ export const handleTokenAndVirusCollision = async () => {
         addHighScoreEventListener();
       } else {
         generateScoreBoard(highScores, { addNewScore: false });
+        loadRestartGameEventListener();
       }
-
-      // generateHighScoreForm(currentGameLeaderBoardPosition);
-
-      //const postedScore = await postScore();
-
-      //  displayGameOverScreen();
-      //loadRestartGameEventListener();
-      setTimeout(() => {}, 5000);
     }
   });
 };

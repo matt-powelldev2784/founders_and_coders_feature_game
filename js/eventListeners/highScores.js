@@ -2,6 +2,7 @@ import { postScore } from '../highScores/api/postScore.js';
 import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
 import { createElement } from '../helpers/createElement.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';
+import { loadRestartGameEventListener } from './restartGame.js';
 
 export const addHighScoreEventListener = () => {
   const submitHighScoreButton = document.getElementById('high_score__submit_button');
@@ -13,6 +14,7 @@ const refreshHighScoreBoard = async () => {
   highScoreContainer.remove();
   const highScores = await getHighScores();
   generateScoreBoard(highScores, { newScore: false });
+  loadRestartGameEventListener();
 };
 
 const postHighScore = () => {
