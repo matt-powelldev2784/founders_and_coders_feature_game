@@ -5,11 +5,11 @@ import { setGameToPause } from '../eventListeners/pauseGame.js';
 import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
 import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
-import { postScore } from '../highScores/api/postScore.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';
 import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
 import { getLeaderBoardPosition } from '../gameScreens/getLeaderBoardPosition.js';
-import { generateHighScoreForm } from '../gameScreens/generateHighScoreForm.js';
+import { addEntryToHighScores } from '../gameScreens/addEnrtyToHighScores.js';
+import { addHighScoreEventListener } from '../eventListeners/highScores.js';
 
 export const handleTokenAndVirusCollision = async () => {
   bugs.forEach(async (bug) => {
@@ -24,17 +24,23 @@ export const handleTokenAndVirusCollision = async () => {
       bug.endOfLife = true;
       setGameToPause();
       removeResumeGameEventListener();
-      const highScores = await getHighScores();
-      const currentGameLeaderBoardPosition = getLeaderBoardPosition(highScores);
-      console.log('currentGameLeaderBoardPosition', currentGameLeaderBoardPosition);
-      generateScoreBoard(highScores, currentGameLeaderBoardPosition);
+      let highScores = await getHighScores();
+      const leaderBoardPosition = getLeaderBoardPosition(highScores);
+
+      if (leaderBoardPosition && leaderBoardPosition > -1) {
+        highScores = addEntryToHighScores(highScores);
+        generateScoreBoard(highScores, { addNewScore: true });
+        addHighScoreEventListener();
+      } else {
+        generateScoreBoard(highScores, { addNewScore: false });
+      }
 
       // generateHighScoreForm(currentGameLeaderBoardPosition);
 
       //const postedScore = await postScore();
 
       //  displayGameOverScreen();
-      //  loadRestartGameEventListener();
+      //loadRestartGameEventListener();
       setTimeout(() => {}, 5000);
     }
   });

@@ -1,5 +1,5 @@
 export const loadRestartGameEventListener = () => {
-  const restartGameButton = document.getElementById('game_over__restart_game_button');
+  const restartGameButton = document.getElementById('high_score__restart_game_button');
   restartGameButton.addEventListener('click', restartGame);
   document.addEventListener('keydown', restartGame);
 };

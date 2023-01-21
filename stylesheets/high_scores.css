@@ -13,16 +13,31 @@
 
 .high_score__board {
   display: flex;
-  justify-content: safe center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 90%;
   height: 85%;
-  background: black;
+  background: #161616;
+  border-radius: 1rem;
   overflow-y: auto;
   padding: 1rem;
-  border: 3px solid green;
+}
+@media only screen and (max-width: 992px) {
+  .high_score__board {
+    margin-top: 1.5rem;
+    justify-content: safe center;
+  }
+}
+
+.high_score__scores_container {
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 7rem;
 }
 
 .high_score__title {
@@ -32,12 +47,10 @@
   font-family: 'Berkelium Bitmap', sans-serif;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 1rem;
 }
 @media only screen and (max-width: 992px) {
   .high_score__title {
     font-size: clamp(0.5rem, 4vw, 3rem);
-    margin-bottom: 0.5rem;
     min-height: 2.5rem;
   }
 }
@@ -47,12 +60,22 @@
   }
 }
 
+.high_score__scores_container {
+  min-height: 7rem;
+}
+
 .high_score__li {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
-  min-height: 2.5rem;
+  max-width: 70rem;
+  min-height: 3rem;
+}
+@media only screen and (max-width: 992px) {
+  .high_score__li {
+    min-height: 2rem;
+  }
 }
 
 .high_score__num {
@@ -86,6 +109,14 @@
   font-family: 'Berkelium Bitmap', sans-serif;
   width: 30%;
   text-align: right;
+}
+
+.high_score__buttons_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .high_score__restart_game_button,
