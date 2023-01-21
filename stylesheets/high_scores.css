@@ -1,0 +1,57 @@
+.high_score__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  border: 3px solid green;
+}
+
+.high_score__board {
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+  background: black;
+  overflow-y: auto;
+  border: 3px solid red;
+}
+
+.high_score__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 3rem;
+  border: 3px solid green;
+}
+
+.high_score__num {
+  display: inline-block;
+  color: white;
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-family: 'Berkelium Bitmap', sans-serif;
+  width: 15%;
+  border: 2px solid blue;
+}
+
+.high_score__name {
+  display: inline-block;
+  color: white;
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-family: 'Berkelium Bitmap', sans-serif;
+  width: 55%;
+  border: 1px solid red;
+}
+
+.high_score__score {
+  display: inline-block;
+  color: white;
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-family: 'Berkelium Bitmap', sans-serif;
+  border: 2px solid blue;
+  width: 30%;
+}

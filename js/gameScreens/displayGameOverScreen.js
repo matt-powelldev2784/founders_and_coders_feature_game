@@ -32,7 +32,11 @@ export const displayGameOverScreen = () => {
     gameOverImg,
     buttonContainer
   );
-  const gameOverWrapper = createElement('div', { class: 'game_over__wrapper' }, gameOverElement);
+  const gameOverWrapper = createElement(
+    'div',
+    { class: 'game_over__wrapper', id: 'game_over__wrapper' },
+    gameOverElement
+  );
 
   const gameContainer = document.getElementById('bg_container');
   gameContainer.prepend(gameOverWrapper);
