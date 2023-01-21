@@ -8,6 +8,8 @@ import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
 import { postScore } from '../highScores/api/postScore.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';
 import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
+import { getLeaderBoardPosition } from '../gameScreens/getLeaderBoardPosition.js';
+import { generateHighScoreForm } from '../gameScreens/generateHighScoreForm.js';
 
 export const handleTokenAndVirusCollision = async () => {
   bugs.forEach(async (bug) => {
@@ -22,15 +24,18 @@ export const handleTokenAndVirusCollision = async () => {
       bug.endOfLife = true;
       setGameToPause();
       removeResumeGameEventListener();
-      //displayGameOverScreen();
-      loadRestartGameEventListener();
-      const postedScore = await postScore();
-      console.log('postedScore', postedScore);
       const highScores = await getHighScores();
-      console.log('highScores', highScores);
-      setTimeout(() => {
-        generateScoreBoard(highScores);
-      }, 5000);
+      const currentGameLeaderBoardPosition = getLeaderBoardPosition(highScores);
+      console.log('currentGameLeaderBoardPosition', currentGameLeaderBoardPosition);
+      generateScoreBoard(highScores, currentGameLeaderBoardPosition);
+
+      // generateHighScoreForm(currentGameLeaderBoardPosition);
+
+      //const postedScore = await postScore();
+
+      //  displayGameOverScreen();
+      //  loadRestartGameEventListener();
+      setTimeout(() => {}, 5000);
     }
   });
 };

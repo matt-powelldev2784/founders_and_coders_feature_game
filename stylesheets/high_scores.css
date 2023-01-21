@@ -1,11 +1,14 @@
 .high_score__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90vw;
   height: 90vh;
   margin: 0 auto;
-  border: 3px solid green;
+  z-index: 3;
 }
 
 .high_score__board {
@@ -13,11 +16,35 @@
   justify-content: safe center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: nowrap;
   width: 90%;
-  height: 80%;
+  height: 85%;
   background: black;
   overflow-y: auto;
-  border: 3px solid red;
+  padding: 1rem;
+  border: 3px solid green;
+}
+
+.high_score__title {
+  display: inline-block;
+  color: yellow;
+  font-size: clamp(1rem, 6vw, 3rem);
+  font-family: 'Berkelium Bitmap', sans-serif;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 992px) {
+  .high_score__title {
+    font-size: clamp(0.5rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+    min-height: 2.5rem;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .high_score__title {
+    min-height: 1.8rem;
+  }
 }
 
 .high_score__li {
@@ -25,8 +52,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  min-height: 3rem;
-  border: 3px solid green;
+  min-height: 2.5rem;
 }
 
 .high_score__num {
@@ -35,7 +61,6 @@
   font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
   width: 15%;
-  border: 2px solid blue;
 }
 
 .high_score__name {
@@ -44,7 +69,14 @@
   font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
   width: 55%;
-  border: 1px solid red;
+}
+
+.high_score__input {
+  display: inline-block;
+  color: black;
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-family: 'Berkelium Bitmap', sans-serif;
+  width: 55%;
 }
 
 .high_score__score {
@@ -52,6 +84,15 @@
   color: white;
   font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
-  border: 2px solid blue;
   width: 30%;
+  text-align: right;
+}
+
+.high_score__restart_game_button,
+.high_score__submit_button {
+  display: inline;
+  width: clamp(15rem, 30vw, 20rem);
+  height: auto;
+  flex-shrink: 0;
+  margin: 0.5rem;
 }
