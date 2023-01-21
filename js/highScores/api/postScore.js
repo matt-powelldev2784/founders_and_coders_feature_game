@@ -1,4 +1,4 @@
-import { getScore } from '../globalVariables.js';
+import { getScore } from '../../globalVariables.js';
 import { apiUrl } from './apiUrl.js';
 
 export const postScore = async () => {
