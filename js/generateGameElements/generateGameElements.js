@@ -3,6 +3,7 @@ import { generateToken } from './token/generateToken.js';
 import { getBug } from './bug/bug.js';
 import { generateBug } from './bug/generateBug.js';
 import { generateRandomNumber } from '../helpers/generateRandomNumber.js';
+import { getPauseStatus } from '../eventListeners/pauseGame.js';
 
 let gameElementReleaseSpeed = 4000;
 
@@ -11,6 +12,8 @@ const releaseGameElement = (generateGameElementFn, gameElement) => {
   const releaseInterval = generateRandomNumber(600, 1600) + gameElementReleaseSpeed;
 
   const releaseSetInterval = setInterval(() => {
+    let pauseStatus = getPauseStatus();
+    if (pauseStatus) return;
     generateGameElementFn(gameElement());
 
     if (gameElementReleaseSpeed > 499) {

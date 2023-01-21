@@ -1,7 +1,11 @@
 import { createElement } from '../helpers/createElement.js';
 import { isTouchDevice } from '../helpers/isTouchDevice.js';
+import { generateGameElements } from '../generateGameElements/generateGameElements.js';
 
 export let gameIsPaused = false;
+export const getPauseStatus = () => {
+  return gameIsPaused;
+};
 
 export const addPauseGameEventListener = () => {
   document.addEventListener('keydown', pauseGame);
