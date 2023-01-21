@@ -22,7 +22,7 @@ export const handleTokenAndVirusCollision = async () => {
       bug.endOfLife = true;
       setGameToPause();
       removeResumeGameEventListener();
-      displayGameOverScreen();
+      //displayGameOverScreen();
       loadRestartGameEventListener();
       const postedScore = await postScore();
       console.log('postedScore', postedScore);
