@@ -17,7 +17,7 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 90%;
+  width: 98%;
   height: 85%;
   background: #161616;
   border-radius: 1rem;
@@ -36,7 +36,7 @@
   justify-content: safe center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   min-height: 7rem;
 }
 
@@ -68,30 +68,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   max-width: 70rem;
   min-height: 3rem;
+  font-size: clamp(1rem, 4vw, 2rem);
 }
 @media only screen and (max-width: 992px) {
   .high_score__li {
-    min-height: 2rem;
+    min-height: 2.5rem;
+    font-size: clamp(1rem, 3.5vw, 2rem);
   }
 }
 
 .high_score__num {
   display: inline-block;
   color: white;
-  font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
-  width: 15%;
+  width: 10%;
 }
 
 .high_score__name {
   display: inline-block;
   color: white;
-  font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
-  width: 55%;
+  width: 60%;
 }
 
 @keyframes blink {
@@ -113,9 +113,9 @@
 .high_score__input {
   display: inline-block;
   color: black;
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: inherit;
   font-family: 'Berkelium Bitmap', sans-serif;
-  width: 55%;
+  width: 60%;
   background: none;
   border: none;
   outline: none;
@@ -124,7 +124,6 @@
 .high_score__score {
   display: inline-block;
   color: white;
-  font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
   width: 30%;
   text-align: right;

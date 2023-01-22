@@ -14,7 +14,7 @@ export const generateScores = (highScores) => {
       scoreName = createElement('input', {
         class: 'high_score__input flashing',
         id: 'high_score__input',
-        placeholder: 'Enter Name Here...',
+        placeholder: 'Type Name Here...',
       });
 
       scoreNum = createElement('div', { class: 'high_score__num flashing' }, i + 1);
