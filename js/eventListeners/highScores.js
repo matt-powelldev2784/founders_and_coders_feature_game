@@ -1,6 +1,5 @@
 import { postScore } from '../highScores/api/postScore.js';
 import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
-import { createElement } from '../helpers/createElement.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';
 import { loadRestartGameEventListener } from './restartGame.js';
 import { onHighScoreMenuFocus } from './highScoreMenu.js';
