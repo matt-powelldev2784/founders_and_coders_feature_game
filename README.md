@@ -37,10 +37,7 @@ the callback function from requestAnimationFrame in Safari is taking twice as mu
 compared to Firefox and Chrome. To offset some of the issues with this, the application defines some
 variables specifically for Safari browsers.
 
-I'm also occasionally seeing an issue where the animation runs very quickly on first run, but after
-a page reload it works fine! I haven't managed find out where the issue is coming from.
-
 I had some issues getting the application to centre on an iPhone in landscape mode. I’ve struggled
-to work out the correct way to deal with the iPhone navigation bar! I’ve resorted to putting a
-margin-top on body element to get a decent result for the user. I’m unable to test on Android as I
-don’t have the hardware.
+to work out a good way to deal with the iPhone navigation bar! I’ve resorted to putting a margin-top
+on body element to get a decent result for the user. I’m unable to test on Android as I don’t have
+the hardware.
