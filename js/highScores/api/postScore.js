@@ -13,6 +13,5 @@ export const postScore = async (playerName) => {
 
   const addScore = await fetch(apiUrl, options);
   const addScoreJson = addScore.json();
-  console.log('addScoreJson', addScoreJson);
   return addScoreJson;
 };

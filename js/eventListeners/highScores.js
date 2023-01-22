@@ -24,7 +24,6 @@ const refreshHighScoreBoard = async () => {
 
 const postHighScore = () => {
   const playerName = document.getElementById('high_score__input').value;
-  console.log('playerName', playerName);
   postScore(playerName);
   refreshHighScoreBoard();
 };

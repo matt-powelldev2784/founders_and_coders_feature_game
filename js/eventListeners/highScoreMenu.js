@@ -16,12 +16,10 @@ export const onHighScoreMenuFocus = (event) => {
 };
 
 export const highScoreArrowsEventListener = () => {
-  console.log('a');
   document.addEventListener('keydown', addKeyboardArrowsEvent);
 };
 
 const addKeyboardArrowsEvent = (event) => {
-  console.log('b');
   const highScoreButton = document.getElementById('high_score__buttons_container');
 
   if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
