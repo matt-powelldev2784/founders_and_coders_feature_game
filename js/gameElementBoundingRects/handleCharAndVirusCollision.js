@@ -2,7 +2,6 @@ import { bugs } from '../generateGameElements/bug/generateBug.js';
 import { character } from '../character/character.js';
 import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
-import { displayGameOverScreen } from '../gameScreens/displayGameOverScreen.js';
 import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';

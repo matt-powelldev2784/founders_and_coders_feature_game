@@ -10,7 +10,7 @@ import { tokens } from './generateGameElements/token/generateToken.js';
 import { bugs } from './generateGameElements/bug/generateBug.js';
 import { character } from './character/character.js';
 import { handleTokenAndCharacterCollision } from './gameElementBoundingRects/handleTokenAndCharacterCollision.js';
-import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleTokenAndVirusCollision.js';
+import { handleTokenAndVirusCollision } from './gameElementBoundingRects/handleCharAndVirusCollision.js';
 import { setPropertyValue } from './helpers/updateProperties.js';
 
 let lastTime;
