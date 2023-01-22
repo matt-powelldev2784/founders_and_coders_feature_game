@@ -11,7 +11,7 @@ import { addEntryToHighScores } from '../gameScreens/addEnrtyToHighScores.js';
 import { addHighScoreEventListener } from '../eventListeners/highScores.js';
 import { highScoreArrowsEventListener } from '../eventListeners/highScoreMenu.js';
 
-export const handleTokenAndVirusCollision = async () => {
+export const handleCharAndVirusCollision = async () => {
   bugs.forEach(async (bug) => {
     const { endOfLife } = bug;
     if (endOfLife) return;
