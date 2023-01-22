@@ -10,6 +10,7 @@ import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
 import { getLeaderBoardPosition } from '../gameScreens/getLeaderBoardPosition.js';
 import { addEntryToHighScores } from '../gameScreens/addEnrtyToHighScores.js';
 import { addHighScoreEventListener } from '../eventListeners/highScores.js';
+import { highScoreArrowsEventListener } from '../eventListeners/highScoreMenu.js';
 
 export const handleTokenAndVirusCollision = async () => {
   bugs.forEach(async (bug) => {
@@ -32,9 +33,11 @@ export const handleTokenAndVirusCollision = async () => {
         highScores = addEntryToHighScores(highScores);
         generateScoreBoard(highScores, { addNewScore: true });
         addHighScoreEventListener();
+        highScoreArrowsEventListener();
       } else {
         generateScoreBoard(highScores, { addNewScore: false });
         loadRestartGameEventListener();
+        highScoreArrowsEventListener();
       }
     }
   });

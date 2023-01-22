@@ -1,4 +1,4 @@
-import { onHighScoreMenuFocus } from './highScoreMenuFocus.js';
+import { onHighScoreMenuFocus } from './highScoreMenu.js';
 
 export const loadRestartGameEventListener = () => {
   const restartGameButton = document.getElementById('high_score__buttons_container');
