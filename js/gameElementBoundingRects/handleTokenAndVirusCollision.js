@@ -28,6 +28,7 @@ export const handleTokenAndVirusCollision = async () => {
       const leaderBoardPosition = getLeaderBoardPosition(highScores);
 
       if (leaderBoardPosition && leaderBoardPosition > -1) {
+        console.log('a');
         highScores = addEntryToHighScores(highScores);
         generateScoreBoard(highScores, { addNewScore: true });
         addHighScoreEventListener();
