@@ -11,7 +11,7 @@ export const addCssRuleForToken = (className) => {
     `position: absolute;
      align-items: center;
      bottom: ${bottom}%;
-     left: 1500px;
+     left: 2000px;
      z-index: 1; 
      `
   );
