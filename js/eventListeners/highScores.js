@@ -1,6 +1,6 @@
-import { postScore } from '../highScores/api/postScore.js';
-import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
-import { getHighScores } from '../highScores/api/getHighScores.js';
+import { postScore } from '../endOfGame/highScoresApi/postScore.js';
+import { generateScoreBoard } from '../endOfGame/generateScoreBoard.js';
+import { getHighScores } from '../endOfGame/highScoresApi/getHighScores.js';
 import { loadRestartGameEventListener } from './restartGame.js';
 import { onHighScoreMenuFocus } from './highScoreMenu.js';
 

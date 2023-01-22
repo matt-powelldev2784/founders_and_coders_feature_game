@@ -4,10 +4,10 @@ import { detectBoundingRectCollision } from './detectBoundingRectCollision.js';
 import { setGameToPause } from '../eventListeners/pauseGame.js';
 import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
-import { getHighScores } from '../highScores/api/getHighScores.js';
-import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
-import { getLeaderBoardPosition } from '../gameScreens/getLeaderBoardPosition.js';
-import { addEntryToHighScores } from '../gameScreens/addEnrtyToHighScores.js';
+import { getHighScores } from '../endOfGame/highScoresApi/getHighScores.js';
+import { generateScoreBoard } from '../endOfGame/generateScoreBoard.js';
+import { getLeaderBoardPosition } from '../endOfGame/getLeaderBoardPosition.js';
+import { addEntryToHighScores } from '../endOfGame/addEnrtyToHighScores.js';
 import { addHighScoreEventListener } from '../eventListeners/highScores.js';
 import { highScoreArrowsEventListener } from '../eventListeners/highScoreMenu.js';
 
