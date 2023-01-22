@@ -7,11 +7,9 @@ export const getLeaderBoardPosition = (highScores) => {
   highScores.forEach((scoreDetails, i) => {
     const { highScore } = scoreDetails;
     if (currentScore > highScore && !leaderBoardPosition) {
-      console.log('i', i);
       leaderBoardPosition = i;
     }
   });
 
-  console.log('leaderBoardPosition', leaderBoardPosition);
   return leaderBoardPosition;
 };

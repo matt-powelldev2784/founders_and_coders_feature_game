@@ -3,9 +3,14 @@ import { generateScoreBoard } from '../gameScreens/generateScoreBoard.js';
 import { createElement } from '../helpers/createElement.js';
 import { getHighScores } from '../highScores/api/getHighScores.js';
 import { loadRestartGameEventListener } from './restartGame.js';
+import { onHighScoreMenuFocus } from './highScoreMenuFocus.js';
 
 export const addHighScoreEventListener = () => {
-  const submitHighScoreButton = document.getElementById('high_score__submit_button');
+  const submitHighScoreButton = document.getElementById('high_score__buttons_container');
+  submitHighScoreButton.addEventListener('focusin', onHighScoreMenuFocus);
+  submitHighScoreButton.addEventListener('focusout', onHighScoreMenuFocus);
+  const nameInput = document.getElementById('high_score__input');
+  nameInput.focus();
   submitHighScoreButton.addEventListener('click', postHighScore);
 };
 

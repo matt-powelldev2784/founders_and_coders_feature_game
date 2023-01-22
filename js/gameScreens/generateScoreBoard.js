@@ -1,4 +1,5 @@
 import { createElement } from '../helpers/createElement.js';
+import { generateScores } from './generateScores.js';
 
 export const generateScoreBoard = (highScores, newScore) => {
   const { addNewScore } = newScore;
@@ -17,35 +18,26 @@ export const generateScoreBoard = (highScores, newScore) => {
   });
   const button = addNewScore ? submitScoreButton : restartGameButton;
 
-  const buttonsContainer = createElement('div', { class: 'high_score__buttons_container' }, button);
-
-  const scoresElem = createElement('ol', { class: 'high_score__scores_container' });
-
-  highScores.map((scoreDetails, i) => {
-    const { name, highScore } = scoreDetails;
-
-    let scoreName = createElement('div', { class: 'high_score__name' }, name);
-    if (scoreDetails.name === 'type name here...') {
-      scoreName = createElement('input', {
-        class: 'high_score__input',
-        id: 'high_score__input',
-        value: `${name}`,
-      });
-    }
-
-    const scoreNum = createElement('div', { class: 'high_score__num' }, i + 1);
-    const score = createElement('div', { class: 'high_score__score' }, highScore);
-
-    const scoreListItem = createElement(
-      'li',
-      { class: 'high_score__li' },
-      scoreNum,
-      scoreName,
-      score
-    );
-
-    scoresElem.append(scoreListItem);
+  const leftNavArrow = createElement('img', {
+    src: './img/left_arrow.svg',
+    class: 'high_score__arrow',
+    id: 'high_score__arrow_left',
   });
+  const rightNavArrow = createElement('img', {
+    src: './img/right_arrow.svg',
+    class: 'high_score__arrow',
+    id: 'high_score__arrow_right',
+  });
+
+  const buttonsContainer = createElement(
+    'button',
+    { class: 'high_score__buttons_container', id: 'high_score__buttons_container' },
+    rightNavArrow,
+    button,
+    leftNavArrow
+  );
+
+  const scoresElem = generateScores(highScores);
 
   const highScoreBoardElem = createElement(
     'form',

@@ -94,12 +94,31 @@
   width: 55%;
 }
 
+@keyframes blink {
+  0% {
+    color: red;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.flashing {
+  animation: blink 2s infinite;
+}
+
 .high_score__input {
   display: inline-block;
   color: black;
   font-size: clamp(1rem, 4vw, 2rem);
   font-family: 'Berkelium Bitmap', sans-serif;
   width: 55%;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .high_score__score {
@@ -115,8 +134,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.high_score__arrow {
+  display: none;
+  width: auto;
+  height: clamp(1.2rem, 2vw, 5rem);
+  flex-shrink: 0;
 }
 
 .high_score__restart_game_button,
