@@ -17,12 +17,13 @@ const refreshHighScoreBoard = async () => {
   const highScoreContainer = document.getElementById('high_score__container');
   highScoreContainer.remove();
   const highScores = await getHighScores();
+  console.log('highScores', highScores);
   generateScoreBoard(highScores, { newScore: false });
   loadRestartGameEventListener();
 };
 
-const postHighScore = () => {
+const postHighScore = async () => {
   const playerName = document.getElementById('high_score__input').value;
-  postScore(playerName);
+  await postScore(playerName);
   refreshHighScoreBoard();
 };
