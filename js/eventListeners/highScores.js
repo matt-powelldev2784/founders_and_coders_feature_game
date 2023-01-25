@@ -22,7 +22,8 @@ const refreshHighScoreBoard = async () => {
   loadRestartGameEventListener();
 };
 
-const postHighScore = async () => {
+const postHighScore = async (event) => {
+  event.preventDefault();
   const playerName = document.getElementById('high_score__input').value;
   await postScore(playerName);
   refreshHighScoreBoard();
