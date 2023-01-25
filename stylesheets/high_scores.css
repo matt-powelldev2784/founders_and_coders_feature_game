@@ -45,18 +45,11 @@
   color: yellow;
   font-size: clamp(1rem, 6vw, 3rem);
   font-family: 'Berkelium Bitmap', sans-serif;
-  height: 3rem;
-  min-height: 3rem;
+  margin-bottom: 0.5rem;
 }
 @media only screen and (max-width: 992px) {
   .high_score__title {
     font-size: clamp(0.5rem, 4vw, 3rem);
-    min-height: 2.5rem;
-  }
-}
-@media only screen and (max-width: 568px) {
-  .high_score__title {
-    min-height: 1.8rem;
   }
 }
 
@@ -153,5 +146,5 @@
   width: clamp(15rem, 30vw, 20rem);
   height: auto;
   flex-shrink: 0;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
 }
