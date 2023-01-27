@@ -6,7 +6,7 @@ import { removeResumeGameEventListener } from '../eventListeners/pauseGame.js';
 import { loadRestartGameEventListener } from '../eventListeners/restartGame.js';
 import { getHighScores } from '../endOfGame/highScoresApi/getHighScores.js';
 import { generateScoreBoard } from '../endOfGame/generateScoreBoard.js';
-import { getLeaderBoardPosition } from '../endOfGame/getLeaderBoardPosition.js';
+import { checkIsNewHighScore } from '../endOfGame/checkIsNewHighScore.js';
 import { addEntryToHighScores } from '../endOfGame/addEnrtyToHighScores.js';
 import { addHighScoreEventListener } from '../eventListeners/highScores.js';
 import { highScoreArrowsEventListener } from '../eventListeners/highScoreMenu.js';
@@ -26,9 +26,9 @@ export const handleCharAndVirusCollision = async () => {
       pauseForGaveOver();
       removeResumeGameEventListener();
       let highScores = await getHighScores();
-      const leaderBoardPosition = getLeaderBoardPosition(highScores);
+      const newHighScore = checkIsNewHighScore(highScores);
 
-      if (leaderBoardPosition && leaderBoardPosition > -1) {
+      if (newHighScore) {
         highScores = addEntryToHighScores(highScores);
         generateScoreBoard(highScores, { addNewScore: true });
         addHighScoreEventListener();
