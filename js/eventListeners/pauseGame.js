@@ -73,3 +73,8 @@ const removeGameIsPausedText = () => {
   const pausedText = document.getElementById('main__paused');
   pausedText.remove();
 };
+
+export const pauseForGaveOver = () => {
+  console.log('Game Over');
+  gameIsPaused = true;
+};

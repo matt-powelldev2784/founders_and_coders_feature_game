@@ -10,6 +10,7 @@ import { getLeaderBoardPosition } from '../endOfGame/getLeaderBoardPosition.js';
 import { addEntryToHighScores } from '../endOfGame/addEnrtyToHighScores.js';
 import { addHighScoreEventListener } from '../eventListeners/highScores.js';
 import { highScoreArrowsEventListener } from '../eventListeners/highScoreMenu.js';
+import { pauseForGaveOver } from '../eventListeners/pauseGame.js';
 
 export const handleCharAndVirusCollision = async () => {
   bugs.forEach(async (bug) => {
@@ -22,7 +23,7 @@ export const handleCharAndVirusCollision = async () => {
     const collision = detectBoundingRectCollision(characterBoundingRect, bugBoundingRect);
     if (collision) {
       bug.endOfLife = true;
-      setGameToPause();
+      pauseForGaveOver();
       removeResumeGameEventListener();
       let highScores = await getHighScores();
       const leaderBoardPosition = getLeaderBoardPosition(highScores);
