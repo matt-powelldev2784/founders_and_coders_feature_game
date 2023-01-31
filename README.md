@@ -7,7 +7,10 @@
 I did a bit of research online, before deciding what type of game to make. I came across a few
 tutorials for endless scrolling background games. I thought this type of game would look cool and
 push the bounderies of my current skillset. The game is loosely based on the google dinosaur game
-and this YouTube tutorial: https://www.youtube.com/watch?v=47eXVRJKdkU&t=1280s
+and this YouTube tutorial: https://www.youtube.com/watch?v=47eXVRJKdkU&t=1280s . I managed to get my
+projects completed so I added a backend using NodeJS to store the high scores. This is hosted on
+Heroku. The source code for this is avaiable on github
+https://github.com/matt-powelldev2784/founders_and_coders_feature_game_server
 
 # Building
 
