@@ -9,13 +9,13 @@ export const tokenTypes = [
   },
   {
     key: 1,
-    img: './img/tokens/css_logo_8bit.png',
+    img: './img/tokens/css_logo_8bit.svg',
     text: 'CSS',
     points: 100,
   },
   {
     key: 2,
-    img: './img/tokens/js_logo_8bit.png',
+    img: './img/tokens/js_logo_8bit.svg',
     text: 'JAVASCRIPT',
     points: 300,
   },
@@ -27,7 +27,7 @@ export const tokenTypes = [
   },
   {
     key: 4,
-    img: './img/tokens/node_js_8bit.png',
+    img: './img/tokens/node_js_8bit.svg',
     text: 'NODEJS',
     points: 1000,
   },
