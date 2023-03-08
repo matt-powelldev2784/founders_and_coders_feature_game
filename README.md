@@ -42,5 +42,5 @@ variables specifically for Safari browsers.
 
 I had some issues getting the application to centre on an iPhone in landscape mode. I’ve struggled
 to work out a good way to deal with the iPhone navigation bar! I’ve resorted to putting a margin-top
-on body element to get a decent result for the user. I’m unable to test on Android as I don’t have
-the hardware.
+on the body element to get a decent result for the user. I’m unable to test on Android as I don’t
+have the hardware.
